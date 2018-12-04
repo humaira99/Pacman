@@ -1,10 +1,12 @@
-package sample;
+package characters;
 
 
 
 import javafx.animation.AnimationTimer;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import gameboard.GameManager;
+import gameboard.Maze;
 
 import java.util.Random;
 
