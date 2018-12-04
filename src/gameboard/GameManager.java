@@ -1,7 +1,6 @@
 package gameboard;
 
 
-
 import characters.Cookie;
 import characters.Ghost;
 import characters.Pacman;
@@ -235,6 +234,7 @@ public class GameManager {
      * Generates the ghosts for the pacman!
      */
     public void generateGhosts() {
+
         this.ghosts.add(new Ghost(18.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, Color.DEEPPINK, maze, this));
         this.ghosts.add(new Ghost(22.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, Color.GREENYELLOW, maze, this));
         this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, Color.BLACK, maze, this));
