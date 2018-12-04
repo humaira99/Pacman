@@ -337,6 +337,14 @@ public class GameManager {
                    }
                    break;
             }
+            if(pacman.getCenterX() < 0.0){
+                pacman.setCenterX(1200 + pacman.getRadius());
+
+            }
+            if(pacman.getCenterX() > 1250){
+                    pacman.setCenterX(0 + pacman.getRadius());
+
+                }
             }
         };
     }
