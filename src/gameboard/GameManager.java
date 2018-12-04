@@ -306,6 +306,7 @@ public class GameManager {
             switch (direction) {
                 case "left":
                     if (!maze.isTouching(pacman.getCenterX() - pacman.getRadius(), pacman.getCenterY(), 15)) {
+                        pacman.setRotate(180);
                         pacman.setCenterX(pacman.getCenterX() - step);
                         checkCookieCoalition(pacman, "x");
                         checkGhostCoalition();
@@ -313,6 +314,7 @@ public class GameManager {
                     break;
                 case "right":
                     if (!maze.isTouching(pacman.getCenterX() + pacman.getRadius(), pacman.getCenterY(), 15)) {
+                        pacman.setRotate(0);
                         pacman.setCenterX(pacman.getCenterX() + step);
                         checkCookieCoalition(pacman, "x");
                         checkGhostCoalition();
@@ -320,6 +322,7 @@ public class GameManager {
                     break;
                 case "up":
                     if (!maze.isTouching(pacman.getCenterX(), pacman.getCenterY() - pacman.getRadius(), 15)) {
+                        pacman.setRotate(270);
                         pacman.setCenterY(pacman.getCenterY() - step);
                         checkCookieCoalition(pacman, "y");
                         checkGhostCoalition();
@@ -327,6 +330,7 @@ public class GameManager {
                     break;
                 case "down":
                    if (!maze.isTouching(pacman.getCenterX(), pacman.getCenterY() + pacman.getRadius(), 15)) {
+                       pacman.setRotate(90);
                        pacman.setCenterY(pacman.getCenterY() + step);
                        checkCookieCoalition(pacman, "y");
                        checkGhostCoalition();
