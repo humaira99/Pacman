@@ -1,26 +1,25 @@
 package gameboard;
 
 
-
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 public class Main extends Application {
 
     @Override
     public void start(Stage theStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("pacman.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("start.fxml"));
         theStage.setTitle( "Pacman" );
 
-        Group root = new Group();
+        Group root1 = new Group();
         Scene theScene = new Scene( root );
         theStage.setScene( theScene );
 
-        Canvas canvas = new Canvas( 1225, 600 );
+        /*Canvas canvas = new Canvas( 1225, 600 );
         root.getChildren().add( canvas );
         GameManager gameManager = new GameManager(root);
 
@@ -28,9 +27,10 @@ public class Main extends Application {
 
         theScene.addEventHandler(KeyEvent.KEY_PRESSED, event -> gameManager.movePacman(event));
         theScene.addEventHandler(KeyEvent.KEY_RELEASED, event -> gameManager.stopPacman(event));
-        theScene.addEventHandler(KeyEvent.KEY_PRESSED, event -> gameManager.restartGame(event));
+        theScene.addEventHandler(KeyEvent.KEY_PRESSED, event -> gameManager.restartGame(event));*/
 
         theStage.show();
+
     }
 
 
