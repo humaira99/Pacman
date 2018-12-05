@@ -61,9 +61,11 @@ public class Controller {
 
         Canvas canvas = new Canvas( 1225, 600 );
         root.getChildren().add( canvas );
-        GraphicsContext gc = canvas.getGraphicsContext2D();
-        gc.setFill(ColourSet.background);
-        gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
+        if(ColourSet.background != null) {
+            GraphicsContext gc = canvas.getGraphicsContext2D();
+            gc.setFill(ColourSet.background);
+            gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
+        }
         GameManager gameManager = new GameManager(root);
 
         gameManager.drawBoard();

@@ -1,8 +1,8 @@
 package characters;
 
 
-
 import gameboard.ColourSet;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 
@@ -16,7 +16,11 @@ public class Cookie extends Circle {
         this.setCenterX(x);
         this.setCenterY(y);
         this.setRadius(12.5);
-        this.setFill(ColourSet.cookie);
+        if(ColourSet.cookie != null) {
+            this.setFill(ColourSet.cookie);
+        }
+        else
+            this.setFill(Color.SADDLEBROWN);
     }
 
 
