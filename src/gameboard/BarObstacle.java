@@ -2,7 +2,6 @@ package gameboard;
 
 
 
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class BarObstacle extends Rectangle {
@@ -25,7 +24,7 @@ public class BarObstacle extends Rectangle {
             this.setHeight(length * BarObstacle.THICKNESS);
             this.setWidth(BarObstacle.THICKNESS);
         }
-        this.setFill(Color.CADETBLUE);
+        this.setFill(ColourSet.wall);
         this.setStrokeWidth(3);
     }
 }
