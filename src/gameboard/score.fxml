@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameboard.Controller">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="357.0" minWidth="10.0" percentWidth="50.0" prefWidth="290.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="311.0" minWidth="10.0" prefWidth="310.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="90.0" text="TopRound" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" fx:id="topRound" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="90.0" text="MiddleRound" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" fx:id="middleRound" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="90.0" text="LowRound" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" fx:id="lowRound"/>
+      <Label fx:id="topScore" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="90.0" text="TopScore" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="90.0" text="MiddleScore" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" fx:id="middleScore"/>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="90.0" text="LowScore" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" fx:id="lowScore" />
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="606.0" text="Your Score" textAlignment="CENTER" GridPane.columnSpan="2" />
+   </children>
+</GridPane>

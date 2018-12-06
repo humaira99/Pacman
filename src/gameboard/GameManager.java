@@ -12,9 +12,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class GameManager {
 
@@ -32,6 +30,7 @@ public class GameManager {
     private Score scoreBoard;
     private boolean gameEnded;
     private int cookiesEaten;
+    public static ArrayList<Integer> scboard = new ArrayList<>();
 
     /**
      * Constructor
@@ -64,7 +63,10 @@ public class GameManager {
         }
         this.pacman.setCenterX(2.5 * BarObstacle.THICKNESS);
         this.pacman.setCenterY(2.5 * BarObstacle.THICKNESS);
+        scboard.add(score);
+
         lifes--;
+
         score -= 10;
         this.scoreBoard.lifes.setText("Lifes: " + this.lifes);
         this.scoreBoard.score.setText("Score: " + this.score);
@@ -83,6 +85,8 @@ public class GameManager {
             root.getChildren().remove(ghost);
         }
         javafx.scene.text.Text endGame = new javafx.scene.text.Text("Game Over, press ESC to restart");
+        ShowScores showScores = new ShowScores();
+        showScores.ShowScores();
         endGame.setX(BarObstacle.THICKNESS * 3);
         endGame.setY(BarObstacle.THICKNESS * 28);
         endGame.setFont(Font.font("Arial", 40));

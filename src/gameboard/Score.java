@@ -24,4 +24,5 @@ public class Score {
         root.getChildren().add(score);
         root.getChildren().add(lifes);
     }
+
 }

@@ -8,9 +8,9 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ColorPicker;
+import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 public class Controller {
@@ -25,11 +25,6 @@ public class Controller {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("setup.fxml"));
             Parent root = (Parent) fxmlLoader.load();
-            /*Stage stage = new Stage();
-            stage.sizeToScene();
-            stage.setTitle("Setup");
-            stage.setScene(new Scene(root));
-            stage.show();*/
             content.getChildren().setAll(root);
         } catch (Exception e) {
             e.printStackTrace();
@@ -85,7 +80,7 @@ public class Controller {
     public void cookieColour(javafx.event.ActionEvent actionEvent){
 
         ColourSet set = new ColourSet();
-        Color col = cookieColourPicker.getValue();
+        //Color col = cookieColourPicker.getValue();
         set.getCookieCol(cookieColourPicker.getValue());
 
     }
@@ -95,9 +90,8 @@ public class Controller {
 
     @FXML
     public void wallColour(javafx.event.ActionEvent actionEvent){
-
         ColourSet set = new ColourSet();
-        Color col = wallColourPicker.getValue();
+        //Color col = wallColourPicker.getValue();
         set.getWallCol(wallColourPicker.getValue());
 
     }
@@ -109,10 +103,39 @@ public class Controller {
     public void bkgColour(javafx.event.ActionEvent actionEvent){
 
         ColourSet set = new ColourSet();
-        Color col = backColourPicker.getValue();
+        //Color col = backColourPicker.getValue();
         set.getBackgroundCol(backColourPicker.getValue());
 
     }
+
+    @FXML
+    Label topRound;
+
+    @FXML
+    Label middleRound;
+
+    @FXML
+    Label lowRound;
+
+    @FXML
+    Label topScore;
+
+    @FXML
+    Label middleScore;
+
+    @FXML
+    Label lowScore;
+
+    @FXML
+    public void scores(){
+        CalculateScore.calculateScore();
+
+        topScore.setText("" + CalculateScore.score3);
+        middleScore.setText("" + CalculateScore.score2);
+        lowScore.setText("" + CalculateScore.score1);
+
+    }
+
 
 
 }
