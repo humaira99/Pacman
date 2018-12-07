@@ -12,6 +12,9 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+import scores.score.CalculateScore;
+import scores.score.ScoreFile;
+import scores.highscore.ShowHighScore;
 
 public class Controller {
 
@@ -24,7 +27,7 @@ public class Controller {
     @FXML
     public void startButtonPressed(javafx.event.ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("setup.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../screens/setup.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             content.getChildren().setAll(root);
         } catch (Exception e) {
@@ -36,7 +39,7 @@ public class Controller {
     @FXML
     public void setBackPressed(javafx.event.ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("start.fxml"));
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("../screens/start.fxml"));
             Parent root1 = (Parent) fxmlLoader1.load();
             contentset.getChildren().setAll(root1);
         } catch (Exception e) {
@@ -159,7 +162,7 @@ public class Controller {
 
     @FXML
     public void high(){
-        s1.setText("" +ScoreFile.highscoreList.get(0));
+        s1.setText("" + ScoreFile.highscoreList.get(0));
         s2.setText("" +ScoreFile.highscoreList.get(1));
         s3.setText("" +ScoreFile.highscoreList.get(2));
         s4.setText("" +ScoreFile.highscoreList.get(3));

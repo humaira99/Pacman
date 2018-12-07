@@ -11,6 +11,9 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
+import scores.score.CalculateScore;
+import scores.score.ScoreFile;
+import scores.score.ShowScores;
 
 import java.util.*;
 

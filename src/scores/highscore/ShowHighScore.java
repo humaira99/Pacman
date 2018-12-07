@@ -1,27 +1,29 @@
-package gameboard;
+package scores.highscore;
 
+import gameboard.Controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class ShowScores {
+public class ShowHighScore {
 
-    public void ShowScores() {
+
+    public void ShowHighScore() {
+
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("score.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("highscore/highscore.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
-            stage.setTitle("Score");
+            stage.setTitle("Highscores");
             Scene theScene = new Scene(root);
             stage.setScene(theScene);
             Controller controller = fxmlLoader.getController();
-            controller.scores();
+            controller.high();
             stage.show();
-
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
 }
+

@@ -1,4 +1,4 @@
-package gameboard;
+package scores.score;
 
 import java.util.*;
 
@@ -8,7 +8,7 @@ public class CalculateScore {
     static int score1;
     static int score2;
     static int score3;
-    static int total = -30;
+    public static int total = -30;
 
     public static HashMap<String, Integer> scboard2 = new HashMap<>();
     public static ArrayList<String> order = new ArrayList<>();
