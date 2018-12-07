@@ -31,7 +31,7 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="15" />
-          <entry key="java" value="72" />
+          <entry key="java" value="73" />
           <entry key="png" value="3" />
           <entry key="txt" value="9" />
         </counts>
@@ -39,7 +39,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="72" />
+          <entry key="JAVA" value="73" />
           <entry key="PLAIN_TEXT" value="9" />
           <entry key="XML" value="15" />
         </counts>
@@ -47,14 +47,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="421" />
-          <entry key="java" value="7025" />
-          <entry key="txt" value="659" />
+          <entry key="java" value="7117" />
+          <entry key="txt" value="707" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7025" />
-          <entry key="PLAIN_TEXT" value="659" />
+          <entry key="JAVA" value="7117" />
+          <entry key="PLAIN_TEXT" value="707" />
           <entry key="XML" value="421" />
         </counts>
       </usages-collector>
@@ -65,8 +65,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gameboard/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-54">
-              <caret line="146" column="4" selection-start-line="146" selection-start-column="4" selection-end-line="146" selection-end-column="4" />
+            <state relative-caret-position="218">
+              <caret line="325" column="40" selection-start-line="325" selection-start-column="40" selection-end-line="325" selection-end-column="40" />
               <folding>
                 <element signature="e#764#765#0" expanded="true" />
                 <element signature="e#792#793#0" expanded="true" />
@@ -121,6 +121,7 @@
         <option value="$PROJECT_DIR$/src/gameboard/setup.fxml" />
         <option value="$PROJECT_DIR$/src/scores/ScoreFile.java" />
         <option value="$PROJECT_DIR$/src/scores/CalculateScore.java" />
+        <option value="$PROJECT_DIR$/src/gameboard/DrawBoard.java" />
         <option value="$PROJECT_DIR$/src/gameboard/GameManager.java" />
       </list>
     </option>
@@ -160,7 +161,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544156942975" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544157391986" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -333,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544156032956</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="refactored code: drawboard by making new method 'drawRow'">
+      <created>1544156989647</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1544156989647</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -433,7 +441,8 @@
     <MESSAGE value="completed highscore list" />
     <MESSAGE value="fixed java compatibility warnings" />
     <MESSAGE value="refactored code by adding score packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored code by adding score packages" />
+    <MESSAGE value="refactored code: drawboard by making new method 'drawRow'" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored code: drawboard by making new method 'drawRow'" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
@@ -705,10 +714,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/DrawBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-54">
-          <caret line="146" column="4" selection-start-line="146" selection-start-column="4" selection-end-line="146" selection-end-column="4" />
+        <state relative-caret-position="218">
+          <caret line="325" column="40" selection-start-line="325" selection-start-column="40" selection-end-line="325" selection-end-column="40" />
           <folding>
             <element signature="e#764#765#0" expanded="true" />
             <element signature="e#792#793#0" expanded="true" />

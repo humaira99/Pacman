@@ -297,6 +297,8 @@ public class GameManager {
         double pacmanRightEdge = pacmanCenterX + pacman.getRadius();
         double pacmanTopEdge = pacmanCenterY - pacman.getRadius();
         double pacmanBottomEdge = pacmanCenterY + pacman.getRadius();
+
+
         for (Cookie cookie:cookieSet) {
             double cookieCenterX = cookie.getCenterX();
             double cookieCenterY = cookie.getCenterY();
@@ -306,37 +308,22 @@ public class GameManager {
             double cookieBottomEdge = cookieCenterY + cookie.getRadius();
             if (axis.equals("x")) {
                 // pacman goes right
+
                 if ((cookieCenterY >= pacmanTopEdge && cookieCenterY <= pacmanBottomEdge) && (pacmanRightEdge >= cookieLeftEdge && pacmanRightEdge <= cookieRightEdge)) {
-                    if (cookie.isVisible()) {
-                        this.score += cookie.getValue();
-                        this.cookiesEaten++;
-                    }
-                    cookie.hide();
+                    cookieEaten(cookie);
                 }
                 // pacman goes left
                 if ((cookieCenterY >= pacmanTopEdge && cookieCenterY <= pacmanBottomEdge) && (pacmanLeftEdge >= cookieLeftEdge && pacmanLeftEdge <= cookieRightEdge)) {
-                    if (cookie.isVisible()) {
-                        this.score += cookie.getValue();
-                        this.cookiesEaten++;
-                    }
-                    cookie.hide();
+                    cookieEaten(cookie);
                 }
             } else {
                 // pacman goes up
                 if ((cookieCenterX >= pacmanLeftEdge && cookieCenterX <= pacmanRightEdge) && (pacmanBottomEdge >= cookieTopEdge && pacmanBottomEdge <= cookieBottomEdge)) {
-                    if (cookie.isVisible()) {
-                        this.score += cookie.getValue();
-                        this.cookiesEaten++;
-                    }
-                    cookie.hide();
+                    cookieEaten(cookie);
                 }
                 // pacman goes down
                 if ((cookieCenterX >= pacmanLeftEdge && cookieCenterX <= pacmanRightEdge) && (pacmanTopEdge <= cookieBottomEdge && pacmanTopEdge >= cookieTopEdge)) {
-                    if (cookie.isVisible()) {
-                        this.score += cookie.getValue();
-                        this.cookiesEaten++;
-                    }
-                    cookie.hide();
+                    cookieEaten(cookie);
                 }
             }
             this.scoreBoard.score.setText("Score: " + this.score);
@@ -346,6 +333,13 @@ public class GameManager {
         }
     }
 
+    public void cookieEaten(Cookie cookie){
+        if (cookie.isVisible()) {
+            this.score += cookie.getValue();
+            this.cookiesEaten++;
+        }
+        cookie.hide();
+    }
     /**
      * Checks if pacman is touching a ghost
      */
