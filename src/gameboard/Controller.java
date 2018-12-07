@@ -128,7 +128,7 @@ public class Controller {
 
     @FXML
     public void scores(){
-        CalculateScore.calculateScore();
+       CalculateScore.calculateScore();
 
         topRound.setText("" + CalculateScore.order.get(2));
         middleRound.setText("" + CalculateScore.order.get(1));

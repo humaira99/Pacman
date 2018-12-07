@@ -12,12 +12,12 @@ public class CalculateScore {
     public static HashMap<String, Integer> scboard2 = new HashMap<>();
     public static ArrayList<String> order = new ArrayList<>();
     public static ArrayList<Integer> sc = new ArrayList<>();
-
+    public static Map<String, Integer> sortedMap = new LinkedHashMap<>();
 
     public static void calculateScore() {
         score1 = scboard.get(0);
-        score2 = scboard.get(1) - score1;
-        score3 = scboard.get(2) - (score1 + score2);
+        score2 = scboard.get(1) - score1 + 10;
+        score3 = scboard.get(2) - (score1 + score2) + 10;
 
         scboard2.put("Round 1", score1);
         scboard2.put("Round 2", score2);
@@ -30,7 +30,6 @@ public class CalculateScore {
             }
         });
 
-        Map<String, Integer> sortedMap = new LinkedHashMap<>();
         for (Map.Entry<String, Integer> entry : list) {
             sortedMap.put(entry.getKey(), entry.getValue());
         }
@@ -38,7 +37,11 @@ public class CalculateScore {
         for (Map.Entry<String, Integer> entry : sortedMap.entrySet()) {
             order.add(entry.getKey());
             sc.add(entry.getValue());
+
         }
+        System.out.println(sc.get(0));
+        System.out.println(sc.get(1));
+        System.out.println(sc.get(2));
 
     }
 }

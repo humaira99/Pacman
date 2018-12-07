@@ -26,6 +26,11 @@ public class GameManager {
     private AnimationTimer downPacmanAnimation;
     private Maze maze;
     private int lifes;
+
+    public int getScore() {
+        return score;
+    }
+
     private int score;
     private Score scoreBoard;
     private boolean gameEnded;
@@ -63,11 +68,11 @@ public class GameManager {
         }
         this.pacman.setCenterX(2.5 * BarObstacle.THICKNESS);
         this.pacman.setCenterY(2.5 * BarObstacle.THICKNESS);
-        scboard.add(score);
-
+        ScoreFile scoreFile = new ScoreFile(this);
+        scoreFile.writeToFile();
         lifes--;
-
         score -= 10;
+        scboard.add(score);
         this.scoreBoard.lifes.setText("Lifes: " + this.lifes);
         this.scoreBoard.score.setText("Score: " + this.score);
         if (lifes == 0) {
@@ -111,6 +116,13 @@ public class GameManager {
             this.lifes = 3;
             this.score = 0;
             this.cookiesEaten = 0;
+
+            scboard.clear();
+            CalculateScore.scboard2.clear();
+            CalculateScore.order.clear();
+            CalculateScore.sc.clear();
+            CalculateScore.sortedMap.clear();
+
             gameEnded = false;
         }
     }
@@ -120,6 +132,7 @@ public class GameManager {
      * Draws the board of the game with the cookies and the Pacman
      */
     public void drawBoard() {
+
         this.maze.CreateMaze(root);
         // 1st line
         Integer skip[] = {5, 17};

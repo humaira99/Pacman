@@ -7,7 +7,6 @@ import javafx.stage.Stage;
 
 public class ShowScores {
 
-
     public void ShowScores() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("score.fxml"));
