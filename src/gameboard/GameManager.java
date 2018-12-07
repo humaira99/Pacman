@@ -68,11 +68,10 @@ public class GameManager {
         }
         this.pacman.setCenterX(2.5 * BarObstacle.THICKNESS);
         this.pacman.setCenterY(2.5 * BarObstacle.THICKNESS);
-        ScoreFile scoreFile = new ScoreFile(this);
-        scoreFile.writeToFile();
         lifes--;
-        score -= 10;
         scboard.add(score);
+        score -= 10;
+
         this.scoreBoard.lifes.setText("Lifes: " + this.lifes);
         this.scoreBoard.score.setText("Score: " + this.score);
         if (lifes == 0) {
@@ -90,6 +89,8 @@ public class GameManager {
             root.getChildren().remove(ghost);
         }
         javafx.scene.text.Text endGame = new javafx.scene.text.Text("Game Over, press ESC to restart");
+        ScoreFile scoreFile = new ScoreFile(this);
+        scoreFile.writeToFile();
         ShowScores showScores = new ShowScores();
         showScores.ShowScores();
         endGame.setX(BarObstacle.THICKNESS * 3);

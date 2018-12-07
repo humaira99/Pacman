@@ -8,6 +8,7 @@ public class CalculateScore {
     static int score1;
     static int score2;
     static int score3;
+    static int total;
 
     public static HashMap<String, Integer> scboard2 = new HashMap<>();
     public static ArrayList<String> order = new ArrayList<>();
@@ -34,11 +35,15 @@ public class CalculateScore {
             sortedMap.put(entry.getKey(), entry.getValue());
         }
 
+        int i = 0;
         for (Map.Entry<String, Integer> entry : sortedMap.entrySet()) {
             order.add(entry.getKey());
             sc.add(entry.getValue());
+            total += sc.get(i);
+            i++;
 
         }
+
 
     }
 }

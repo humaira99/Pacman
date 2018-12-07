@@ -1,5 +1,6 @@
 package gameboard;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
@@ -14,6 +15,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class Controller {
+
     @FXML
     private GridPane content;
 
@@ -80,7 +82,6 @@ public class Controller {
     public void cookieColour(javafx.event.ActionEvent actionEvent){
 
         ColourSet set = new ColourSet();
-        //Color col = cookieColourPicker.getValue();
         set.getCookieCol(cookieColourPicker.getValue());
 
     }
@@ -91,7 +92,6 @@ public class Controller {
     @FXML
     public void wallColour(javafx.event.ActionEvent actionEvent){
         ColourSet set = new ColourSet();
-        //Color col = wallColourPicker.getValue();
         set.getWallCol(wallColourPicker.getValue());
 
     }
@@ -103,7 +103,6 @@ public class Controller {
     public void bkgColour(javafx.event.ActionEvent actionEvent){
 
         ColourSet set = new ColourSet();
-        //Color col = backColourPicker.getValue();
         set.getBackgroundCol(backColourPicker.getValue());
 
     }
@@ -127,6 +126,9 @@ public class Controller {
     Label lowScore;
 
     @FXML
+    Label totalScore;
+
+    @FXML
     public void scores(){
        CalculateScore.calculateScore();
 
@@ -139,9 +141,14 @@ public class Controller {
         lowScore.setText("" + CalculateScore.sc.get(0));
 
 
+        totalScore.setText("" + CalculateScore.total);
+
+
+
     }
 
-
-
+    @FXML
+    public void showHighscore(ActionEvent actionEvent) {
+    }
 }
 
