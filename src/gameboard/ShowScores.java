@@ -14,7 +14,7 @@ public class ShowScores {
             Stage stage = new Stage();
             stage.setTitle("Score");
             Scene theScene = new Scene(root);
-            //theScene.getStylesheets().add("src/screens/style.css");
+            theScene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
             stage.setScene(theScene);
             Controller controller = fxmlLoader.getController();
             controller.scores();

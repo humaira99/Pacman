@@ -18,6 +18,7 @@ public class Main extends Application {
         Group root1 = new Group();
         Scene theScene = new Scene( root );
         theStage.setScene( theScene );
+        theScene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
 
         /*Canvas canvas = new Canvas( 1225, 600 );
         root.getChildren().add( canvas );

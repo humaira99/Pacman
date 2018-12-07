@@ -30,7 +30,6 @@ public class Controller {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     @FXML
@@ -91,8 +90,10 @@ public class Controller {
 
     @FXML
     public void wallColour(javafx.event.ActionEvent actionEvent){
+
         ColourSet set = new ColourSet();
         set.getWallCol(wallColourPicker.getValue());
+
 
     }
 

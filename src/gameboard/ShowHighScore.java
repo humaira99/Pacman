@@ -16,7 +16,7 @@ public class ShowHighScore {
             Stage stage = new Stage();
             stage.setTitle("Highscores");
             Scene theScene = new Scene(root);
-            theScene.getStylesheets().add("style.css");
+            theScene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
             stage.setScene(theScene);
             Controller controller = fxmlLoader.getController();
             controller.high();

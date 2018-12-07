@@ -26,8 +26,8 @@
       <Label fx:id="topScore" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="90.0" text="TopScore" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
       <Label fx:id="middleScore" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="90.0" text="MiddleScore" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
       <Label fx:id="lowScore" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="90.0" text="LowScore" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="606.0" text="Your Score" textAlignment="CENTER" GridPane.columnSpan="2" />
-      <Label text="Total Score" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+      <Label fx:id="ursc" alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="606.0" text="Your Score" textAlignment="CENTER" GridPane.columnSpan="2" />
+      <Label fx:id="total" text="Total Score" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
       <Label fx:id="totalScore" text="total" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
       <Button mnemonicParsing="false" text="View Highscore List" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER" onAction="#showHighscore" />
    </children>
