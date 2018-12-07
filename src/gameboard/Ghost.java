@@ -162,12 +162,9 @@ public class Ghost extends Rectangle implements Runnable {
             public void handle(long currentNanoTime)
             {
                 //gameManager.checkGhostCoalition();
-                Coalition coalition = new Coalition(gameManager, gameManager.getPacman(), gameManager.getCookieSet(), gameManager.getGhosts(), gameManager.getScoreBoard());
-                try {
-                    coalition.checkGhostCoalition();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                //Coalition coalition = new Coalition(gameManager, gameManager.getPacman(), gameManager.getCookieSet(), gameManager.getGhosts(), gameManager.getScoreBoard());
+                gameManager.checkGhostCoalition();
+
                 double leftEdge = getX();
                 double topEdge = getY();
                 double rightEdge = getX() + getWidth();
