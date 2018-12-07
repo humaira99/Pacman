@@ -170,7 +170,6 @@ public class Controller {
         s9.setText("" +ScoreFile.highscoreList.get(8));
         s10.setText("" +ScoreFile.highscoreList.get(9));
 
-
     }
 
 }
