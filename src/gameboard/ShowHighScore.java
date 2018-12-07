@@ -1,6 +1,5 @@
-package scores.highscore;
+package gameboard;
 
-import gameboard.Controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,11 +11,12 @@ public class ShowHighScore {
     public void ShowHighScore() {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("highscore/highscore.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("highscore.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Highscores");
             Scene theScene = new Scene(root);
+            theScene.getStylesheets().add("style.css");
             stage.setScene(theScene);
             Controller controller = fxmlLoader.getController();
             controller.high();

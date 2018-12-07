@@ -12,9 +12,6 @@ import javafx.scene.control.Label;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import scores.score.CalculateScore;
-import scores.score.ScoreFile;
-import scores.highscore.ShowHighScore;
 
 public class Controller {
 
@@ -56,6 +53,7 @@ public class Controller {
 
         Group root = new Group();
         Scene theScene = new Scene( root );
+        //theScene.getStylesheets().add("screens/style.css");
         stage.setScene(theScene);
 
         Canvas canvas = new Canvas( 1225, 600 );

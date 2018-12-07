@@ -1,4 +1,4 @@
-package scores.score;
+package gameboard;
 
 import java.util.*;
 
