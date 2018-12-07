@@ -1,6 +1,5 @@
 package gameboard;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
@@ -148,7 +147,31 @@ public class Controller {
     }
 
     @FXML
-    public void showHighscore(ActionEvent actionEvent) {
+    Label s1, s2, s3, s4, s5, s6, s7, s8, s9, s10;
+
+    @FXML
+    public void showHighscore(javafx.event.ActionEvent actionEvent) {
+
+        ShowHighScore show = new ShowHighScore();
+        show.ShowHighScore();
+
     }
+
+    @FXML
+    public void high(){
+        s1.setText("" +ScoreFile.highscoreList.get(0));
+        s2.setText("" +ScoreFile.highscoreList.get(1));
+        s3.setText("" +ScoreFile.highscoreList.get(2));
+        s4.setText("" +ScoreFile.highscoreList.get(3));
+        s5.setText("" +ScoreFile.highscoreList.get(4));
+        s6.setText("" +ScoreFile.highscoreList.get(5));
+        s7.setText("" +ScoreFile.highscoreList.get(6));
+        s8.setText("" +ScoreFile.highscoreList.get(7));
+        s9.setText("" +ScoreFile.highscoreList.get(8));
+        s10.setText("" +ScoreFile.highscoreList.get(9));
+
+
+    }
+
 }
 

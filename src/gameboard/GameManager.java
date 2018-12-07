@@ -91,6 +91,7 @@ public class GameManager {
         javafx.scene.text.Text endGame = new javafx.scene.text.Text("Game Over, press ESC to restart");
         ScoreFile scoreFile = new ScoreFile(this);
         scoreFile.writeToFile();
+        scoreFile.readFromFile();
         ShowScores showScores = new ShowScores();
         showScores.ShowScores();
         endGame.setX(BarObstacle.THICKNESS * 3);
