@@ -130,9 +130,14 @@ public class Controller {
     public void scores(){
         CalculateScore.calculateScore();
 
-        topScore.setText("" + CalculateScore.score3);
-        middleScore.setText("" + CalculateScore.score2);
-        lowScore.setText("" + CalculateScore.score1);
+        topRound.setText("" + CalculateScore.order.get(2));
+        middleRound.setText("" + CalculateScore.order.get(1));
+        lowRound.setText("" + CalculateScore.order.get(0));
+
+        topScore.setText("" + CalculateScore.sc.get(2));
+        middleScore.setText("" + CalculateScore.sc.get(1));
+        lowScore.setText("" + CalculateScore.sc.get(0));
+
 
     }
 

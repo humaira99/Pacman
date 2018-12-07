@@ -1,34 +1,44 @@
 package gameboard;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 import static gameboard.GameManager.scboard;
 
 public class CalculateScore {
-    public static int gameScore;
     static int score1;
     static int score2;
     static int score3;
 
-    public static ArrayList<Integer> scboard2 = new ArrayList<>();
+    public static HashMap<String, Integer> scboard2 = new HashMap<>();
+    public static ArrayList<String> order = new ArrayList<>();
+    public static ArrayList<Integer> sc = new ArrayList<>();
 
-    public static void calculateScore(){
+
+    public static void calculateScore() {
         score1 = scboard.get(0);
         score2 = scboard.get(1) - score1;
         score3 = scboard.get(2) - (score1 + score2);
 
-        System.out.println(score1);
-        System.out.println(score2);
-        System.out.println(score3);
+        scboard2.put("Round 1", score1);
+        scboard2.put("Round 2", score2);
+        scboard2.put("Round 3", score3);
 
-        scboard2.add(score1);
-        scboard2.add(score2);
-        scboard2.add(score3);
-        Collections.sort(scboard2);
+        List<Map.Entry<String, Integer>> list = new LinkedList<>(scboard2.entrySet());
+        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+            public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+                return (o1.getValue()).compareTo(o2.getValue());
+            }
+        });
 
-        score1 = scboard2.get(0);
-        score2 = scboard2.get(1);
-        score3 = scboard2.get(2);
+        Map<String, Integer> sortedMap = new LinkedHashMap<>();
+        for (Map.Entry<String, Integer> entry : list) {
+            sortedMap.put(entry.getKey(), entry.getValue());
+        }
+
+        for (Map.Entry<String, Integer> entry : sortedMap.entrySet()) {
+            order.add(entry.getKey());
+            sc.add(entry.getValue());
+        }
+
     }
 }
