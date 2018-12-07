@@ -1,9 +1,7 @@
-package characters;
+package gameboard;
 
 
 
-import gameboard.GameManager;
-import gameboard.Maze;
 import javafx.animation.AnimationTimer;
 import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
@@ -163,7 +161,13 @@ public class Ghost extends Rectangle implements Runnable {
         {
             public void handle(long currentNanoTime)
             {
-                gameManager.checkGhostCoalition();
+                //gameManager.checkGhostCoalition();
+                Coalition coalition = new Coalition(gameManager, gameManager.getPacman(), gameManager.getCookieSet(), gameManager.getGhosts(), gameManager.getScoreBoard());
+                try {
+                    coalition.checkGhostCoalition();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 double leftEdge = getX();
                 double topEdge = getY();
                 double rightEdge = getX() + getWidth();
