@@ -5,10 +5,6 @@
       <change afterPath="$PROJECT_DIR$/src/gameboard/ScoreFile.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/gameboard/highscore.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/CalculateScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/CalculateScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/score.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/score.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,13 +49,13 @@
         <counts>
           <entry key="fxml" value="412" />
           <entry key="java" value="5953" />
-          <entry key="txt" value="444" />
+          <entry key="txt" value="487" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="5953" />
-          <entry key="PLAIN_TEXT" value="444" />
+          <entry key="PLAIN_TEXT" value="487" />
           <entry key="XML" value="412" />
         </counts>
       </usages-collector>
@@ -70,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gameboard/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="143" column="52" selection-start-line="143" selection-start-column="52" selection-end-line="143" selection-end-column="52" />
+            <state relative-caret-position="166">
+              <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -232,7 +228,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544149850003" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544149939803" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -370,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544148205449</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added in total score to highscore pop up">
+      <created>1544149929270</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1544149929270</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -392,7 +395,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="700" y="23" width="740" height="813" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.04727794" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -403,7 +405,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43411928" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43411928" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39805827" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -465,7 +467,8 @@
     <MESSAGE value="sorted round number for score pop up" />
     <MESSAGE value="fixed bug where restarting game would not clear lists" />
     <MESSAGE value="fixed bug where score would -10 from r2&amp;3" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug where score would -10 from r2&amp;3" />
+    <MESSAGE value="added in total score to highscore pop up" />
+    <option name="LAST_COMMIT_MESSAGE" value="added in total score to highscore pop up" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="setValue">
@@ -723,8 +726,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="143" column="52" selection-start-line="143" selection-start-column="52" selection-end-line="143" selection-end-column="52" />
+        <state relative-caret-position="166">
+          <caret line="147" column="5" lean-forward="true" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
