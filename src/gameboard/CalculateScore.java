@@ -17,7 +17,7 @@ public class CalculateScore {
     public static void calculateScore() {
         score1 = scboard.get(0);
         score2 = scboard.get(1) - score1 + 10;
-        score3 = scboard.get(2) - (score1 + score2) + 10;
+        score3 = scboard.get(2) - (score1 + score2) + 20;
 
         scboard2.put("Round 1", score1);
         scboard2.put("Round 2", score2);
@@ -39,9 +39,6 @@ public class CalculateScore {
             sc.add(entry.getValue());
 
         }
-        System.out.println(sc.get(0));
-        System.out.println(sc.get(1));
-        System.out.println(sc.get(2));
 
     }
 }
