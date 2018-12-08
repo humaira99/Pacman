@@ -120,6 +120,7 @@ public class Ghost extends Rectangle implements Runnable {
         }
         switch (whereToGo) {
             case "left":
+                this.setScaleX(-1);
                 if (!maze.isTouching(leftEdge, topEdge, padding)) {
                     setX(leftEdge - step);
                 } else {
@@ -130,6 +131,7 @@ public class Ghost extends Rectangle implements Runnable {
                 }
                 break;
             case "right":
+                this.setScaleX(1);
                 if (!maze.isTouching(rightEdge, topEdge, padding)) {
                     setX(leftEdge + step);
                 } else {
