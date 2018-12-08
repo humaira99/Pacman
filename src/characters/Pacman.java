@@ -1,6 +1,9 @@
-package gameboard;
+package characters;
 
 
+import gameboard.Coalition;
+import gameboard.GameManager;
+import gameboard.Maze;
 import javafx.animation.AnimationTimer;
 import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
@@ -9,8 +12,8 @@ import javafx.scene.shape.Circle;
 
 public class Pacman extends Circle {
 
-    GameManager game;
-    Maze maze;
+    private GameManager game;
+    private Maze maze;
 
 
     public Pacman(GameManager game, double x, double y) {
@@ -27,7 +30,7 @@ public class Pacman extends Circle {
      * @param direction
      * @return
      */
-    AnimationTimer createAnimation(String direction) {
+    public AnimationTimer createAnimation(String direction) {
         Pacman pacman = this;
         double step = 5;
         Coalition coalition = new Coalition(game, this, game.getCookieSet(), game.getGhosts());

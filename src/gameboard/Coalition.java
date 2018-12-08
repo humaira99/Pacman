@@ -1,6 +1,8 @@
 package gameboard;
 
 import characters.Cookie;
+import characters.Ghost;
+import characters.Pacman;
 
 import java.util.Set;
 
@@ -16,7 +18,7 @@ public class Coalition {
      *
      * @param
      */
-    Coalition(GameManager game, Pacman pacman, Set<Cookie> cookieSet, Set<Ghost> ghosts) {
+    public Coalition(GameManager game, Pacman pacman, Set<Cookie> cookieSet, Set<Ghost> ghosts) {
 
         this.game = game;
         this.pacman = pacman;

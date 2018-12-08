@@ -9,7 +9,6 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -17,27 +16,7 @@ import javafx.stage.Stage;
 public class Controller {
 
     @FXML
-    private GridPane content;
-
-    @FXML
     private GridPane contentset;
-
-    @FXML
-    TextField username;
-
-    public static String uname;
-
-    @FXML
-    public void startButtonPressed(javafx.event.ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../screens/setup.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            content.getChildren().setAll(root);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        uname = username.getText();
-    }
 
     @FXML
     public void setBackPressed(javafx.event.ActionEvent actionEvent) {

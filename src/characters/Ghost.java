@@ -1,7 +1,10 @@
-package gameboard;
+package characters;
 
 
 
+import gameboard.Coalition;
+import gameboard.GameManager;
+import gameboard.Maze;
 import javafx.animation.AnimationTimer;
 import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;

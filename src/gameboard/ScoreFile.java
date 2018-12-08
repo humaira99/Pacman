@@ -24,7 +24,7 @@ public class ScoreFile {
             FileWriter fileWriter = new FileWriter(highscore, true);
             BufferedWriter writer = new BufferedWriter(fileWriter);
 
-            writer.write(Controller.uname + "\n");
+            writer.write(StartController.uname + "\n");
             writer.write(game.getScore() + "\n");
 
             writer.close();
