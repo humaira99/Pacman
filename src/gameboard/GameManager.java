@@ -279,7 +279,8 @@ public class GameManager {
             if(pacman.getCenterX() > 1250){
                     pacman.setCenterX(0 + pacman.getRadius());
 
-                }
+            }
+
             }
         };
     }

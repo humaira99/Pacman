@@ -19,6 +19,8 @@ public class Ghost extends Rectangle implements Runnable {
     int timesWalked;
 
     public Ghost(double x, double y, Image img, Maze maze, GameManager gameManager) {
+        this.getX();
+        this.getY();
         this.setX(x);
         this.setY(y);
         this.maze = maze;
@@ -107,6 +109,15 @@ public class Ghost extends Rectangle implements Runnable {
      */
     private void moveUntilYouCant(String whereToGo, String whereToChangeTo, double leftEdge, double topEdge, double rightEdge, double bottomEdge, double padding) {
         double step = 5;
+
+        if(this.getX() < 0.0){
+            this.setX(1250);
+
+        }
+        if(this.getX() > 1300){
+            this.setX(50);
+
+        }
         switch (whereToGo) {
             case "left":
                 if (!maze.isTouching(leftEdge, topEdge, padding)) {
@@ -172,6 +183,7 @@ public class Ghost extends Rectangle implements Runnable {
                 double padding = 12;
                 timesWalked++;
                 int walkAtLeast = 4;
+
                 switch (direction) {
                     case "left":
                         moveUntilYouCant("left", "down", leftEdge, topEdge, rightEdge, bottomEdge, padding);
