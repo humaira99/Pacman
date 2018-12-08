@@ -8,30 +8,22 @@ import java.util.Set;
 public class Coalition {
 
     GameManager game;
-//    int score = game.getScore();
     Pacman pacman;
     Set<Cookie> cookieSet;
     Set<Ghost> ghosts;
-//    int cookiesEaten = game.getCookiesEaten();
-    Score scoreBoard;
-
-
 
     /**
      * Constructor
      *
      * @param
      */
-    Coalition(GameManager game, Pacman pacman, Set<Cookie> cookieSet, Set<Ghost> ghosts, Score scoreBoard) {
+    Coalition(GameManager game, Pacman pacman, Set<Cookie> cookieSet, Set<Ghost> ghosts) {
 
         this.game = game;
         this.pacman = pacman;
         this.cookieSet = cookieSet;
         this.ghosts = ghosts;
-        this.scoreBoard = scoreBoard;
     }
-
-
 
 
     /**
@@ -39,7 +31,7 @@ public class Coalition {
      * @param pacman
      * @param axis
      */
-    public void checkCookieCoalition(Pacman pacman, String axis) throws Exception {
+    public void checkCookieCoalition(Pacman pacman, String axis) {
         double pacmanCenterY = pacman.getCenterY();
         double pacmanCenterX = pacman.getCenterX();
         double pacmanLeftEdge = pacmanCenterX - pacman.getRadius();
@@ -75,9 +67,9 @@ public class Coalition {
                     cookieEaten(cookie);
                 }
             }
-            scoreBoard.score.setText("Score: " + game.getScore());
+            game.getScoreBoard().getScore().setText("Score: " + this.game.getScore());
             if (game.getCookiesEaten() == cookieSet.size()) {
-                this.game.getClass().getDeclaredMethod("endGame");
+                this.game.endGame();
             }
         }
     }
@@ -85,16 +77,16 @@ public class Coalition {
     public void cookieEaten(Cookie cookie){
         if (cookie.isVisible()) {
             int score = game.getScore();
-            score += cookie.getValue();
-            int eat = game.getCookiesEaten();
-                    eat++;
+            game.setScore(score + cookie.getValue());
+            game.setCookiesEaten(game.getCookiesEaten() + 1);
+
         }
         cookie.hide();
     }
     /**
      * Checks if pacman is touching a ghost
      */
-    public void checkGhostCoalition() throws Exception {
+    public void checkGhostCoalition() {
         double pacmanCenterY = pacman.getCenterY();
         double pacmanCenterX = pacman.getCenterX();
         double pacmanLeftEdge = pacmanCenterX - pacman.getRadius();
@@ -108,7 +100,7 @@ public class Coalition {
             double ghostBottomEdge = ghost.getY() + ghost.getHeight();
             if ((pacmanLeftEdge <= ghostRightEdge && pacmanLeftEdge >= ghostLeftEdge) || (pacmanRightEdge >= ghostLeftEdge && pacmanRightEdge <= ghostRightEdge)) {
                 if ((pacmanTopEdge <= ghostBottomEdge && pacmanTopEdge >= ghostTopEdge) || (pacmanBottomEdge >= ghostTopEdge && pacmanBottomEdge <= ghostBottomEdge)) {
-                    this.game.getClass().getDeclaredMethod("lifeLost");
+                    this.game.lifeLost();
                 }
             }
         }

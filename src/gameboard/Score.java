@@ -9,6 +9,10 @@ import javafx.scene.text.Text;
 
 public class Score {
 
+    public Text getScore() {
+        return score;
+    }
+
     public Text score;
     public Text lifes;
 
