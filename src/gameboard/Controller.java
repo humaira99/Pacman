@@ -62,7 +62,7 @@ public class Controller {
     @FXML
     public void high(){
 
-        n1.setText("" +ScoreFile.name.get(0));
+        n1.setText("" + ScoreFile.name.get(0));
         n2.setText("" +ScoreFile.name.get(1));
         n3.setText("" +ScoreFile.name.get(2));
         n4.setText("" +ScoreFile.name.get(3));

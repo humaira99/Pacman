@@ -9,7 +9,7 @@ public class ShowScores {
 
     public void ShowScores() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("score.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../screens/fxml/score.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Score");

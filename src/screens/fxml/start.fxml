@@ -25,14 +25,14 @@
                <children>
                   <ImageView fitHeight="457.0" fitWidth="998.0" layoutY="-5.0" AnchorPane.topAnchor="-5.0">
                      <image>
-                        <Image url="@pacmanstart.png" />
+                        <Image url="@../pacmanstart.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="449.0" layoutY="58.0" mnemonicParsing="false" onAction="#startButtonPressed" prefHeight="48.0" prefWidth="101.0" stylesheets="@../gameboard/style.css" text="START" />
+                  <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="449.0" layoutY="58.0" mnemonicParsing="false" onAction="#startButtonPressed" prefHeight="48.0" prefWidth="101.0" stylesheets="@../../gameboard/style.css" text="START" />
                   <TextField fx:id="username" layoutX="499.0" layoutY="14.0"/>
                   <Label alignment="CENTER" layoutX="334.0" layoutY="14.0" prefHeight="27.0" prefWidth="157.0" text="Enter Username:" />
                </children>
