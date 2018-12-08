@@ -9,6 +9,7 @@ import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
@@ -22,6 +23,11 @@ public class Controller {
     private GridPane contentset;
 
     @FXML
+    TextField username;
+
+    public static String uname;
+
+    @FXML
     public void startButtonPressed(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../screens/setup.fxml"));
@@ -30,6 +36,7 @@ public class Controller {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        uname = username.getText();
     }
 
     @FXML
@@ -152,6 +159,9 @@ public class Controller {
     Label s1, s2, s3, s4, s5, s6, s7, s8, s9, s10;
 
     @FXML
+    Label n1, n2, n3, n4, n5, n6, n7, n8, n9, n10;
+
+    @FXML
     public void showHighscore(javafx.event.ActionEvent actionEvent) {
 
         ShowHighScore show = new ShowHighScore();
@@ -161,16 +171,28 @@ public class Controller {
 
     @FXML
     public void high(){
-        s1.setText("" + ScoreFile.highscoreList.get(0));
-        s2.setText("" +ScoreFile.highscoreList.get(1));
-        s3.setText("" +ScoreFile.highscoreList.get(2));
-        s4.setText("" +ScoreFile.highscoreList.get(3));
-        s5.setText("" +ScoreFile.highscoreList.get(4));
-        s6.setText("" +ScoreFile.highscoreList.get(5));
-        s7.setText("" +ScoreFile.highscoreList.get(6));
-        s8.setText("" +ScoreFile.highscoreList.get(7));
-        s9.setText("" +ScoreFile.highscoreList.get(8));
-        s10.setText("" +ScoreFile.highscoreList.get(9));
+
+        n1.setText("" +ScoreFile.name.get(0));
+        n2.setText("" +ScoreFile.name.get(1));
+        n3.setText("" +ScoreFile.name.get(2));
+        n4.setText("" +ScoreFile.name.get(3));
+        n5.setText("" +ScoreFile.name.get(4));
+        n6.setText("" +ScoreFile.name.get(5));
+        n7.setText("" +ScoreFile.name.get(6));
+        n8.setText("" +ScoreFile.name.get(7));
+        n9.setText("" +ScoreFile.name.get(8));
+        n10.setText("" +ScoreFile.name.get(9));
+
+        s1.setText("" +ScoreFile.score.get(0));
+        s2.setText("" +ScoreFile.score.get(1));
+        s3.setText("" +ScoreFile.score.get(2));
+        s4.setText("" +ScoreFile.score.get(3));
+        s5.setText("" +ScoreFile.score.get(4));
+        s6.setText("" +ScoreFile.score.get(5));
+        s7.setText("" +ScoreFile.score.get(6));
+        s8.setText("" +ScoreFile.score.get(7));
+        s9.setText("" +ScoreFile.score.get(8));
+        s10.setText("" +ScoreFile.score.get(9));
 
     }
 
