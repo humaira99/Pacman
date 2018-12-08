@@ -1,4 +1,4 @@
-package gameboard;
+package screens;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
