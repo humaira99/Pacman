@@ -186,41 +186,47 @@ public class Ghost extends Rectangle implements Runnable {
                 double bottomEdge = getY() + getHeight();
                 double padding = 12;
                 timesWalked++;
-                int walkAtLeast = 4;
 
                 switch (direction) {
                     case "left":
                         moveUntilYouCant("left", "down", leftEdge, topEdge, rightEdge, bottomEdge, padding);
-                        if (timesWalked > walkAtLeast) {
-                            checkIftheresPathToGo(getRandomDirection("left", "right"));
-                            timesWalked = 0;
-                        }
+                        timesWalkedlr();
                         break;
                     case "right":
                         moveUntilYouCant("right", "up", leftEdge, topEdge, rightEdge, bottomEdge, padding);
-                        if (timesWalked > walkAtLeast) {
-                            checkIftheresPathToGo(getRandomDirection("left", "right"));
-                             timesWalked = 0;
-                        }
+                        timesWalkedlr();
                         break;
                     case "up":
                         moveUntilYouCant("up", "left", leftEdge, topEdge, rightEdge, bottomEdge, padding);
-                        if (timesWalked > walkAtLeast) {
-                            checkIftheresPathToGo(getRandomDirection("up", "down"));
-                            timesWalked = 0;
-                        }
+                        timesWalkedud();
                         break;
                     case "down":
                         moveUntilYouCant("down", "right", leftEdge, topEdge, rightEdge, bottomEdge, padding);
-                        if (timesWalked > walkAtLeast) {
-                            checkIftheresPathToGo(getRandomDirection("up", "down"));
-                            timesWalked = 0;
-                        }
+                        timesWalkedud();
                         break;
                 }
             }
         };
     }
+
+    public void timesWalkedud(){
+        int walkAtLeast = 4;
+
+        if (timesWalked > walkAtLeast) {
+            checkIftheresPathToGo(getRandomDirection("up", "down"));
+            timesWalked = 0;
+        }
+    }
+
+    public void timesWalkedlr(){
+        int walkAtLeast = 4;
+
+        if (timesWalked > walkAtLeast) {
+            checkIftheresPathToGo(getRandomDirection("left", "right"));
+            timesWalked = 0;
+        }
+    }
+
 
     @Override
     public void run() {

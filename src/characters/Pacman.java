@@ -20,7 +20,7 @@ public class Pacman extends Circle {
         this.setCenterX(x);
         this.setCenterY(y);
         this.setRadius(25);
-        Image pacmanpic = new Image ("characters/pacman.png");
+        Image pacmanpic = new Image ("characters/images/pacman.png");
         this.setFill(new ImagePattern(pacmanpic));
         this.game = game;
     }
