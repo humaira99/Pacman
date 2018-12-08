@@ -1,7 +1,6 @@
 package gameboard;
 
 import characters.Cookie;
-import characters.Pacman;
 
 import java.util.Set;
 

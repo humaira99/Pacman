@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="278d63a4-57c9-4544-9829-25950f829d21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/characters/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/Pacman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameboard/Coalition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/Coalition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameboard/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/Ghost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/highscore.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/highscore.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +34,7 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="fxml" value="28" />
-          <entry key="java" value="113" />
+          <entry key="java" value="114" />
           <entry key="png" value="3" />
           <entry key="txt" value="11" />
         </counts>
@@ -45,7 +43,7 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="113" />
+          <entry key="JAVA" value="114" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="XML" value="28" />
         </counts>
@@ -54,15 +52,15 @@
         <counts>
           <entry key="css" value="217" />
           <entry key="fxml" value="545" />
-          <entry key="java" value="9437" />
-          <entry key="txt" value="1232" />
+          <entry key="java" value="9672" />
+          <entry key="txt" value="1310" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="217" />
-          <entry key="JAVA" value="9437" />
-          <entry key="PLAIN_TEXT" value="1232" />
+          <entry key="JAVA" value="9672" />
+          <entry key="PLAIN_TEXT" value="1310" />
           <entry key="XML" value="545" />
         </counts>
       </usages-collector>
@@ -73,13 +71,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/gameboard/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4875">
-              <caret line="338" column="4" selection-start-line="338" selection-start-column="4" selection-end-line="338" selection-end-column="4" />
+            <state relative-caret-position="-3222">
+              <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
               <folding>
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#864#865#0" expanded="true" />
-                <element signature="e#1002#1003#0" expanded="true" />
-                <element signature="e#1050#1051#0" expanded="true" />
+                <element signature="e#931#932#0" expanded="true" />
+                <element signature="e#965#966#0" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#1015#1016#0" expanded="true" />
+                <element signature="e#1068#1069#0" expanded="true" />
+                <element signature="e#1116#1117#0" expanded="true" />
                 <element signature="e#413#414#0" expanded="true" />
                 <element signature="e#442#443#0" expanded="true" />
                 <element signature="e#473#474#0" expanded="true" />
@@ -88,20 +88,23 @@
                 <element signature="e#669#670#0" expanded="true" />
                 <element signature="e#764#765#0" expanded="true" />
                 <element signature="e#792#793#0" expanded="true" />
-                <element signature="e#1120#1121#0" expanded="true" />
-                <element signature="e#1162#1163#0" expanded="true" />
-                <element signature="e#1217#1218#0" expanded="true" />
-                <element signature="e#1260#1261#0" expanded="true" />
-                <element signature="e#1312#1313#0" expanded="true" />
-                <element signature="e#1352#1353#0" expanded="true" />
-                <element signature="e#1406#1407#0" expanded="true" />
-                <element signature="e#1448#1449#0" expanded="true" />
                 <element signature="e#1438#1439#0" expanded="true" />
                 <element signature="e#1471#1472#0" expanded="true" />
                 <element signature="e#1432#1433#0" expanded="true" />
                 <element signature="e#1467#1468#0" expanded="true" />
-                <element signature="e#7587#9798#0" expanded="true" />
-                <element signature="e#9797#9798#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/Pacman.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+              <folding>
+                <element signature="e#856#3070#0" expanded="true" />
+                <element signature="e#3069#3070#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,8 +113,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gameboard/Coalition.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="88" column="38" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+            <state relative-caret-position="1305">
+              <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -156,8 +159,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/gameboard/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-377">
-              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+            <state relative-caret-position="141">
+              <caret line="71" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -194,18 +197,6 @@
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gameboard/ShowHighScore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
     </leaf>
@@ -251,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/gameboard/ShowScores.java" />
         <option value="$PROJECT_DIR$/src/gameboard/CalculateScore.java" />
         <option value="$PROJECT_DIR$/src/characters/Coalition.java" />
-        <option value="$PROJECT_DIR$/src/characters/Pacman.java" />
         <option value="$PROJECT_DIR$/src/characters/Ghost.java" />
         <option value="$PROJECT_DIR$/src/gameboard/highscore.fxml" />
         <option value="$PROJECT_DIR$/src/gameboard/ScoreFile.java" />
@@ -261,6 +251,8 @@
         <option value="$PROJECT_DIR$/src/gameboard/Score.java" />
         <option value="$PROJECT_DIR$/src/gameboard/Coalition.java" />
         <option value="$PROJECT_DIR$/src/gameboard/Ghost.java" />
+        <option value="$PROJECT_DIR$/src/characters/Pacman.java" />
+        <option value="$PROJECT_DIR$/src/gameboard/Pacman.java" />
         <option value="$PROJECT_DIR$/src/gameboard/GameManager.java" />
       </list>
     </option>
@@ -318,7 +310,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544233011921" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544233931622" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -554,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544229859861</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="refactor coalition methods from game manager in to new class">
+      <created>1544233041650</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1544233041650</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -638,7 +637,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="used ghost images" />
     <MESSAGE value="rotate pacman when moved" />
     <MESSAGE value="added doors to maze" />
     <MESSAGE value="added start, setup screens" />
@@ -663,7 +661,8 @@
     <MESSAGE value="username for highscores" />
     <MESSAGE value="make ghost come back when it goes out the door" />
     <MESSAGE value="flip ghost when it changes direction" />
-    <option name="LAST_COMMIT_MESSAGE" value="flip ghost when it changes direction" />
+    <MESSAGE value="refactor coalition methods from game manager in to new class" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor coalition methods from game manager in to new class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -844,13 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/characters/Pacman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/Maze.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-522">
@@ -870,16 +862,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3">
           <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -921,16 +903,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/Coalition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="88" column="38" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/Ghost.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2520">
@@ -942,15 +914,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/Coalition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" column="38" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/Pacman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+          <folding>
+            <element signature="e#856#3070#0" expanded="true" />
+            <element signature="e#3069#3070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4875">
-          <caret line="338" column="4" selection-start-line="338" selection-start-column="4" selection-end-line="338" selection-end-column="4" />
+        <state relative-caret-position="-3222">
+          <caret line="26" column="47" selection-start-line="26" selection-start-column="47" selection-end-line="26" selection-end-column="47" />
           <folding>
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#864#865#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#965#966#0" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1015#1016#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
             <element signature="e#413#414#0" expanded="true" />
             <element signature="e#442#443#0" expanded="true" />
             <element signature="e#473#474#0" expanded="true" />
@@ -959,20 +964,10 @@
             <element signature="e#669#670#0" expanded="true" />
             <element signature="e#764#765#0" expanded="true" />
             <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#1120#1121#0" expanded="true" />
-            <element signature="e#1162#1163#0" expanded="true" />
-            <element signature="e#1217#1218#0" expanded="true" />
-            <element signature="e#1260#1261#0" expanded="true" />
-            <element signature="e#1312#1313#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#1448#1449#0" expanded="true" />
             <element signature="e#1438#1439#0" expanded="true" />
             <element signature="e#1471#1472#0" expanded="true" />
             <element signature="e#1432#1433#0" expanded="true" />
             <element signature="e#1467#1468#0" expanded="true" />
-            <element signature="e#7587#9798#0" expanded="true" />
-            <element signature="e#9797#9798#0" expanded="true" />
           </folding>
         </state>
       </provider>
