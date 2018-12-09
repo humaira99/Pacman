@@ -5,8 +5,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class ShowScores {
+/**
+ * Creates a window which shows the players scores
+ */
 
+public class ShowScores {
+    /**
+     * Creates a score pop up after the game has ended to show scores from all 3 rounds, in descending order
+     */
     public void ShowScores() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../screens/fxml/score.fxml"));
