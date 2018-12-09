@@ -156,7 +156,7 @@ public class GameManager {
 
     /**
      * Restart the game
-     * @param event
+     * @param event - if player presses esc on the keyboard, the game should restart
      */
     public void restartGame(KeyEvent event) {
         if (event.getCode() == KeyCode.ESCAPE && gameEnded) {
@@ -185,7 +185,10 @@ public class GameManager {
     }
 
     /**
-     * Draws the board of the game with the cookies and the Pacman
+     * Draws one row of the game board
+     * @param row each row of the gameboard which needs drawing
+     * @param skip array of integers where the cookies should not be drawn due to maze/islands
+     * Refactored from drawBoard method to eliminate repeating code
      */
     public void drawRow(Integer skip[], int row){
         for (int i = 0; i < 23; i++) {
@@ -197,6 +200,9 @@ public class GameManager {
         }
     }
 
+    /**
+     * Draws the board of the game with the cookies and the Pacman
+     */
     public void drawBoard() {
 
         this.maze.CreateMaze(root);
@@ -237,7 +243,7 @@ public class GameManager {
 
     /**
      * Moves the pacman
-     * @param event
+     * @param event moves in the direction of the arrow key pressed (up/down/left/right)
      */
     public void movePacman(KeyEvent event) {
         for (Ghost ghost : this.ghosts) {
@@ -261,7 +267,7 @@ public class GameManager {
 
     /**
      * Stops the pacman
-     * @param event
+     * @param event when an arrow key is pressed
      */
     public void stopPacman(KeyEvent event) {
         switch(event.getCode()) {
