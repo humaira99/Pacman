@@ -6,6 +6,9 @@ import javafx.scene.Parent;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
+/**
+ * Controls action events from the start window
+ */
 public class StartController {
 
     @FXML
@@ -16,6 +19,11 @@ public class StartController {
 
     public static String uname;
 
+    /**
+     * When start is pressed, the set up window is shown
+     * The username entered is saved
+     * @param actionEvent when the start button on the start page is pressed
+     */
     @FXML
     public void startButtonPressed(javafx.event.ActionEvent actionEvent) {
         try {
