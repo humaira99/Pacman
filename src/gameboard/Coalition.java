@@ -6,6 +6,9 @@ import characters.Pacman;
 
 import java.util.Set;
 
+/**
+ * Checks if Pacman is touching a cookie or a ghost
+ */
 public class Coalition {
 
     GameManager game;
@@ -16,7 +19,11 @@ public class Coalition {
     /**
      * Constructor
      *
-     * @param
+     * @param game GameManager instance
+     * @param pacman gets the pacman to check its coalition
+     * @param cookieSet gets the set of cookies to check if pacman is touching any
+     * @param ghosts gets the set of ghosts to check if pacman is touching any
+     *
      */
     public Coalition(GameManager game, Pacman pacman, Set<Cookie> cookieSet, Set<Ghost> ghosts) {
 
@@ -29,8 +36,8 @@ public class Coalition {
 
     /**
      * Checks if the Pacman touches cookies.
-     * @param pacman
-     * @param axis
+     * @param pacman pacman object
+     * @param axis x or y axis to check which way pacman is going
      */
     public void checkCookieCoalition(Pacman pacman, String axis) {
         double pacmanCenterY = pacman.getCenterY();
@@ -75,6 +82,11 @@ public class Coalition {
         }
     }
 
+    /**
+     * Hides the cookie when pacman touches it and increases score
+     * Refactored from checkCookieCoalition class so code is not repeated
+     * @param cookie gets the specific cookie the pacman touches
+     */
     public void cookieEaten(Cookie cookie){
         if (cookie.isVisible()) {
             int score = game.getScore();
@@ -86,6 +98,7 @@ public class Coalition {
     }
     /**
      * Checks if pacman is touching a ghost
+     * If touching a ghost - lose a life
      */
     public void checkGhostCoalition() {
         double pacmanCenterY = pacman.getCenterY();
