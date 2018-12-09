@@ -1,5 +1,7 @@
 package gameboard;
 
+import gameboard.scores.CalculateScore;
+import gameboard.scores.ScoreFile;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 

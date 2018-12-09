@@ -4,6 +4,8 @@ package gameboard;
 import characters.Cookie;
 import characters.Ghost;
 import characters.Pacman;
+import gameboard.scores.CalculateScore;
+import gameboard.scores.ScoreFile;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Group;
 import javafx.scene.image.Image;

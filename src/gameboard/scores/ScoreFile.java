@@ -1,5 +1,6 @@
-package gameboard;
+package gameboard.scores;
 
+import gameboard.GameManager;
 import screens.StartController;
 
 import java.io.BufferedWriter;
@@ -22,7 +23,7 @@ public class ScoreFile {
 
     public void writeToFile() {
         try {
-            File highscore = new File("src/gameboard/highscore.txt");
+            File highscore = new File("src/gameboard/scores/highscore.txt");
             FileWriter fileWriter = new FileWriter(highscore, true);
             BufferedWriter writer = new BufferedWriter(fileWriter);
 
@@ -39,7 +40,7 @@ public class ScoreFile {
 
         try {
 
-            Scanner scanner = new Scanner(new File("src/gameboard/highscore.txt"));
+            Scanner scanner = new Scanner(new File("src/gameboard/scores/highscore.txt"));
 
             while (scanner.hasNextLine()) {
                 highscoreList.put(scanner.nextLine(), Integer.parseInt(scanner.nextLine()));
