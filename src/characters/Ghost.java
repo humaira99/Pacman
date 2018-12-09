@@ -12,14 +12,31 @@ import javafx.scene.shape.Rectangle;
 
 import java.util.Random;
 
+/**
+ * Creates a Ghost character which moves around the maze to catch pacman
+ * Implements runnable interface for animation
+ *
+ */
 
 public class Ghost extends Rectangle implements Runnable {
 
-    String direction;
-    GameManager gameManager;
-    Maze maze;
-    AnimationTimer animation;
-    int timesWalked;
+    private String direction;
+    private GameManager gameManager;
+    private Maze maze;
+    private AnimationTimer animation;
+    private int timesWalked;
+
+    /**
+     *
+     * Creates a single instance of pacman (singleton pattern)
+     * Loads an image of pacman as the icon
+     * @param x x-coordinate of ghost on the board
+     * @param y y-coordinate of ghost on the board
+     * @param img Ghost image for icon
+     * @param maze Game maze instance
+     * @param gameManager Game instance
+     *
+     */
 
     public Ghost(double x, double y, Image img, Maze maze, GameManager gameManager) {
         this.getX();
@@ -36,6 +53,14 @@ public class Ghost extends Rectangle implements Runnable {
         this.createAnimation();
     }
 
+    /**
+     *
+     * Gets a random direction which the ghost should start moving in
+     * @param exclude1 Doesn't allow the ghost to move in this direction
+     * @param exclude2 Doesn't allow the ghost to move in this direction
+     * @return Random direction the ghost should move
+     */
+
     private String getRandomDirection(String exclude1, String exclude2) {
         String[] directions = {"left", "right", "up", "down"};
         int rnd = new Random().nextInt(directions.length);
@@ -45,6 +70,10 @@ public class Ghost extends Rectangle implements Runnable {
         return directions[rnd];
     }
 
+    /**
+     * Gets a random boolean
+     * @return Random boolean
+     */
     private boolean getRandomBoolean() {
         Random rand = new Random();
         return rand.nextBoolean();
@@ -52,15 +81,15 @@ public class Ghost extends Rectangle implements Runnable {
 
     /**
      * Gets the animation for the ghost
-     * @return
+     * @return animation
      */
     public AnimationTimer getAnimation() {
         return animation;
     }
 
     /**
-     *
-     * @param direction
+     * Checks for obstacles/wall in the ghosts path. If there is, ghost changes direction
+     * @param direction Direction to check for obstacles in
      */
     private void checkIftheresPathToGo(String direction) {
         double rightEdge, leftEdge, topEdge, bottomEdge;
@@ -101,14 +130,15 @@ public class Ghost extends Rectangle implements Runnable {
     }
 
     /**
+     * Moves the ghost in the same direction until it touches an obstacle/wall
      *
-     * @param whereToGo
-     * @param whereToChangeTo
-     * @param leftEdge
-     * @param topEdge
-     * @param rightEdge
-     * @param bottomEdge
-     * @param padding
+     * @param whereToGo Direction of arrow key pressed by user
+     * @param whereToChangeTo Which direction to change to after it touches a wall
+     * @param leftEdge Left edge of the ghost
+     * @param topEdge Top edge of the ghost
+     * @param rightEdge Right edge of the ghost
+     * @param bottomEdge Bottom edge of the ghost
+     * @param padding Offset added on to ghost edges when it hits a wall
      */
     private void moveUntilYouCant(String whereToGo, String whereToChangeTo, double leftEdge, double topEdge, double rightEdge, double bottomEdge, double padding) {
         double step = 5;
@@ -209,7 +239,11 @@ public class Ghost extends Rectangle implements Runnable {
         };
     }
 
-    public void timesWalkedud(){
+    /**
+     * Gets the number of times the ghost has walked either up or down
+     * Refactored from createAnimation class to stop repeating code
+     */
+    private void timesWalkedud(){
         int walkAtLeast = 4;
 
         if (timesWalked > walkAtLeast) {
@@ -218,7 +252,11 @@ public class Ghost extends Rectangle implements Runnable {
         }
     }
 
-    public void timesWalkedlr(){
+    /**
+     * Gets the number of times the ghost has walked either left or right
+     * Refactored from createAnimation class to stop repeating code
+     */
+    private void timesWalkedlr(){
         int walkAtLeast = 4;
 
         if (timesWalked > walkAtLeast) {
@@ -227,9 +265,12 @@ public class Ghost extends Rectangle implements Runnable {
         }
     }
 
-
+    /**
+     * Starts the ghost moving
+     */
     @Override
     public void run() {
         this.animation.start();
     }
 }
+
