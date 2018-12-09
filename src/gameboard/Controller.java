@@ -5,6 +5,11 @@ import gameboard.scores.ScoreFile;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
+/**
+ * Controls the action events from the score pop up screen
+ * Sets score pop up screen labels
+ * Sets highscore pop up screen labels
+ */
 public class Controller {
 
     @FXML
@@ -28,9 +33,12 @@ public class Controller {
     @FXML
     Label totalScore;
 
+    /**
+     * Displays the scores from highest round to lowest on the score pop up
+     */
     @FXML
     public void scores(){
-       CalculateScore.calculateScore();
+        CalculateScore.calculateScore();
 
         topRound.setText("" + CalculateScore.order.get(2));
         middleRound.setText("" + CalculateScore.order.get(1));
@@ -53,6 +61,10 @@ public class Controller {
     @FXML
     Label n1, n2, n3, n4, n5, n6, n7, n8, n9, n10;
 
+    /**
+     * Creates a new high score pop up screen when the "view highscore" button is pressed
+     * @param actionEvent This pop up is shown when the "View Highscore" button is pressed on the score screen
+     */
     @FXML
     public void showHighscore(javafx.event.ActionEvent actionEvent) {
 
@@ -61,6 +73,9 @@ public class Controller {
 
     }
 
+    /**
+     * Displays the top 10 highest scores and usernames of the player who got that score on the highscreen pop up
+     */
     @FXML
     public void high(){
 
