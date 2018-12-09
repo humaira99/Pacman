@@ -7,27 +7,34 @@ import javafx.scene.Group;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Maze of the game board
+ */
 public class Maze {
 
     public Set<BarObstacle> obstacles;
 
+    /**
+     * Creates a new maze
+     */
     Maze() {
         obstacles = new HashSet<>();
     }
 
     /**
      * Checks if point is touching obstacles
-     * @param x
-     * @param y
-     * @return
+     * @param x x-coordinate to check
+     * @param y y-coordinate to check
+     * @param padding Offset to add on when checking if an object is touching the maze
+     * @return true or false if the object is touching the maze
      */
     public Boolean isTouching(double x, double y, double padding) {
         for (BarObstacle barObstacle:obstacles) {
             if (
-                x >= barObstacle.getX() - padding &&
-                x <= barObstacle.getX() + padding + barObstacle.getWidth() &&
-                y >= barObstacle.getY() - padding &&
-                y <= barObstacle.getY() + padding + barObstacle.getHeight())
+                    x >= barObstacle.getX() - padding &&
+                            x <= barObstacle.getX() + padding + barObstacle.getWidth() &&
+                            y >= barObstacle.getY() - padding &&
+                            y <= barObstacle.getY() + padding + barObstacle.getHeight())
             {
                 return true;
             }
@@ -37,11 +44,11 @@ public class Maze {
 
     /**
      * lets you know if there's an obstacle in the current coordinate
-     * @param fromX
-     * @param toX
-     * @param fromY
-     * @param toY
-     * @return
+     * @param fromX x-coordinate start
+     * @param toX x-coordinate end
+     * @param fromY y-coordinate start
+     * @param toY y-coordinate end
+     * @return true/false if the object is touching the maze
      */
     public Boolean hasObstacle(double fromX,  double toX, double fromY, double toY) {
         boolean isTouching = false;
@@ -55,7 +62,7 @@ public class Maze {
 
     /**
      * Draws the maze
-     * @param root
+     * @param root Group where the obstacles are placed
      */
     public void CreateMaze(Group root) {
         //~~~~~~~~~~~~~~~~~~~~~~~~~ frame ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
