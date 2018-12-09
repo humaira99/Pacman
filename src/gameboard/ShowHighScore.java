@@ -5,9 +5,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * Creates a new window which shows the all time highscore list
+ */
 public class ShowHighScore {
 
-
+    /**
+     * Creates a new window pop up which shows the highscores when the 'view highscore' list button is pressed
+     *
+     */
     public void ShowHighScore() {
 
         try {
@@ -26,4 +32,5 @@ public class ShowHighScore {
         }
     }
 }
+
 
