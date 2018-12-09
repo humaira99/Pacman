@@ -4,6 +4,9 @@ import java.util.*;
 
 import static gameboard.GameManager.scboard;
 
+/**
+ * Calculates the score to be displayed on the score pop up after the game has ended
+ */
 public class CalculateScore {
     static int score1;
     static int score2;
@@ -14,6 +17,12 @@ public class CalculateScore {
     public static ArrayList<String> order = new ArrayList<>();
     public static ArrayList<Integer> sc = new ArrayList<>();
     public static Map<String, Integer> sortedMap = new LinkedHashMap<>();
+
+    /**
+     * Calculates scores for each round
+     * Sorts through the hashmap in order to display score and round number from highest to lowest in the score pop up
+     *
+     */
 
     public static void calculateScore() {
         score1 = scboard.get(0);
