@@ -12,11 +12,18 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+/**
+ * Controller to control action events of the Setup window
+ */
 public class SetupController {
 
     @FXML
     private GridPane contentset;
 
+    /**
+     * When back is pressed on the setup window - takes the player to the previous start page
+     * @param actionEvent When the back button is pressed on the setup page
+     */
     @FXML
     public void setBackPressed(javafx.event.ActionEvent actionEvent) {
         try {
@@ -29,6 +36,10 @@ public class SetupController {
 
     }
 
+    /**
+     * When start is pressed on the setup window - the game will start
+     * @param actionEvent When the start button is pressed on the setup window
+     */
     @FXML
     public void setStartPressed(javafx.event.ActionEvent actionEvent) {
 
@@ -37,7 +48,6 @@ public class SetupController {
 
         Group root = new Group();
         Scene theScene = new Scene( root );
-        //theScene.getStylesheets().add("screens/style.css");
         stage.setScene(theScene);
 
         Canvas canvas = new Canvas( 1225, 600 );
@@ -62,6 +72,10 @@ public class SetupController {
     @FXML
     ColorPicker cookieColourPicker;
 
+    /**
+     * Gets the colour that the player has chosen for the cookies in the game
+     * @param actionEvent when the value of the colour picker has changed
+     */
     @FXML
     public void cookieColour(javafx.event.ActionEvent actionEvent){
 
@@ -73,17 +87,25 @@ public class SetupController {
     @FXML
     ColorPicker wallColourPicker;
 
+    /**
+     * Gets the colour that the player has chosen for the walls in the game
+     * @param actionEvent when the value of the colour picker has changed
+     */
     @FXML
     public void wallColour(javafx.event.ActionEvent actionEvent){
 
         ColourSet set = new ColourSet();
         set.getWallCol(wallColourPicker.getValue());
 
-
     }
 
     @FXML
     ColorPicker backColourPicker;
+
+    /**
+     * Gets the colour that the player has chosen for the background in the game
+     * @param actionEvent when the value of the colour picker has changed
+     */
 
     @FXML
     public void bkgColour(javafx.event.ActionEvent actionEvent){
