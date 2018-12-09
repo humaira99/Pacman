@@ -1,6 +1,7 @@
 package characters;
 
 
+
 import gameboard.Coalition;
 import gameboard.GameManager;
 import gameboard.Maze;
@@ -9,11 +10,26 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 
-
+/**
+ * Creates a Pacman Character which the player controls
+ * Pacman dies when caught by a ghost
+ * Eats cookies to collect points
+ *
+ */
 public class Pacman extends Circle {
 
     private GameManager game;
     private Maze maze;
+
+    /**
+     *
+     * Creates a single instance of pacman (singleton pattern)
+     * Loads an image of pacman as the icon
+     * @param game GameManager instance
+     * @param x x-coordinate of pacman on the board
+     * @param y y-coordinate of pacman on the board
+     *
+     */
 
 
     public Pacman(GameManager game, double x, double y) {
@@ -27,8 +43,11 @@ public class Pacman extends Circle {
 
     /**
      * Creates an animation of the movement.
-     * @param direction
-     * @return
+     * Rotates pacman so it is facing the way it is moving
+     * Calls coalition class to check if pacman is touching a ghost/cookie
+     * If pacman exits the doors on the left/right of the maze, he will enter from the opposite side
+     * @param direction direction pacman is moving
+     * @return pacman movement
      */
     public AnimationTimer createAnimation(String direction) {
         Pacman pacman = this;
