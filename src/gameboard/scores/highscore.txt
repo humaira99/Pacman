@@ -42,3 +42,7 @@ humaira
 170
 hjkl
 50
+humz
+680
+humz
+90

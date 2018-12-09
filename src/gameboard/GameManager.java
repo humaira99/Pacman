@@ -83,8 +83,8 @@ public class GameManager {
      */
     GameManager(Group root) {
         this.root = root;
-        this.maze = new Maze();
-        this.pacman = new Pacman(this, 2.5 * BarObstacle.THICKNESS, 2.5 * BarObstacle.THICKNESS);
+        this.maze = Maze.getInstance();
+        this.pacman = Pacman.getInstance(this, 2.5 * BarObstacle.THICKNESS, 2.5 * BarObstacle.THICKNESS);
         this.cookieSet = new HashSet<>();
         this.ghosts = new HashSet<>();
         this.leftPacmanAnimation = pacman.createAnimation("left");

@@ -9,8 +9,11 @@ import java.util.Set;
 
 /**
  * Maze of the game board
+ * Implements singleton design pattern so only one instance of Maze is ever created
  */
 public class Maze {
+
+    private static Maze maze;
 
     public Set<BarObstacle> obstacles;
 
@@ -19,6 +22,14 @@ public class Maze {
      */
     Maze() {
         obstacles = new HashSet<>();
+    }
+
+    public static Maze getInstance(){
+        if(maze == null){
+            maze = new Maze();
+        }
+        return maze;
+
     }
 
     /**

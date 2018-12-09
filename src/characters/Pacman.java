@@ -15,11 +15,14 @@ import javafx.scene.shape.Circle;
  * Pacman dies when caught by a ghost
  * Eats cookies to collect points
  *
+ * Implements singleton design pattern so only one pacman is ever made per game
+ *
  */
 public class Pacman extends Circle {
 
     private GameManager game;
     private Maze maze;
+    private static Pacman pacman;
 
     /**
      *
@@ -36,10 +39,19 @@ public class Pacman extends Circle {
         this.setCenterX(x);
         this.setCenterY(y);
         this.setRadius(25);
-        Image pacmanpic = new Image ("characters/images/pacman.png");
+        Image pacmanpic = new Image("characters/images/pacman.png");
         this.setFill(new ImagePattern(pacmanpic));
         this.game = game;
     }
+
+    public static Pacman getInstance(GameManager game, double x, double y){
+        if(pacman == null){
+            pacman = new Pacman(game, x, y);
+        }
+        return pacman;
+
+    }
+
 
     /**
      * Creates an animation of the movement.
