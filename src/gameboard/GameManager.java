@@ -19,6 +19,10 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Sets up game by drawing the board, generating the ghosts and moving/stopping pacman
+ * Checks whether life is lost, game has ended or restarted
+ */
 public class GameManager {
 
     private Pacman pacman;

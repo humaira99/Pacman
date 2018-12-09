@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="278d63a4-57c9-4544-9829-25950f829d21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/SetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/SetupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/ShowHighScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/ShowHighScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gameboard/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/GameManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +32,7 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="fxml" value="39" />
-          <entry key="java" value="256" />
+          <entry key="java" value="268" />
           <entry key="png" value="3" />
           <entry key="txt" value="15" />
           <entry key="xml" value="1" />
@@ -43,7 +42,7 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="Image" value="3" />
-          <entry key="JAVA" value="256" />
+          <entry key="JAVA" value="268" />
           <entry key="PLAIN_TEXT" value="15" />
           <entry key="XML" value="40" />
         </counts>
@@ -52,15 +51,15 @@
         <counts>
           <entry key="css" value="217" />
           <entry key="fxml" value="555" />
-          <entry key="java" value="17524" />
-          <entry key="txt" value="1536" />
+          <entry key="java" value="17677" />
+          <entry key="txt" value="1546" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="217" />
-          <entry key="JAVA" value="17524" />
-          <entry key="PLAIN_TEXT" value="1536" />
+          <entry key="JAVA" value="17677" />
+          <entry key="PLAIN_TEXT" value="1546" />
           <entry key="XML" value="555" />
         </counts>
       </usages-collector>
@@ -75,11 +74,52 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gameboard/ColourSet.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="90">
+              <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+              <folding>
+                <element signature="e#1056#1057#0" expanded="true" />
+                <element signature="e#1090#1091#0" expanded="true" />
+                <element signature="e#1119#1120#0" expanded="true" />
+                <element signature="e#1146#1147#0" expanded="true" />
+                <element signature="e#1199#1200#0" expanded="true" />
+                <element signature="e#1247#1248#0" expanded="true" />
+                <element signature="e#1280#1281#0" expanded="true" />
+                <element signature="e#1309#1310#0" expanded="true" />
+                <element signature="e#1350#1351#0" expanded="true" />
+                <element signature="e#1382#1383#0" expanded="true" />
+                <element signature="e#1419#1420#0" expanded="true" />
+                <element signature="e#1448#1449#0" expanded="true" />
+                <element signature="e#1477#1478#0" expanded="true" />
+                <element signature="e#1505#1506#0" expanded="true" />
+                <element signature="e#1541#1542#0" expanded="true" />
+                <element signature="e#1574#1575#0" expanded="true" />
+                <element signature="e#1610#1611#0" expanded="true" />
+                <element signature="e#1645#1646#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/Maze.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -96,20 +136,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gameboard/ShowHighScore.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="135">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding>
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/gameboard/BarObstacle.java">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/ShowHighScore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="105">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -119,6 +163,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1560">
               <caret line="107" selection-start-line="107" selection-end-line="107" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/ShowScores.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -215,19 +271,19 @@
         <option value="$PROJECT_DIR$/src/gameboard/scores/ShowScores.java" />
         <option value="$PROJECT_DIR$/src/gameboard/scores/ShowHighScore.java" />
         <option value="$PROJECT_DIR$/src/gameboard/Controller.java" />
-        <option value="$PROJECT_DIR$/src/gameboard/ShowScores.java" />
         <option value="$PROJECT_DIR$/src/screens/StartController.java" />
         <option value="$PROJECT_DIR$/src/gameboard/scores/CalculateScore.java" />
         <option value="$PROJECT_DIR$/src/gameboard/scores/ScoreFile.java" />
         <option value="$PROJECT_DIR$/src/gameboard/BarObstacle.java" />
         <option value="$PROJECT_DIR$/src/gameboard/Coalition.java" />
         <option value="$PROJECT_DIR$/src/gameboard/ColourSet.java" />
-        <option value="$PROJECT_DIR$/src/gameboard/GameManager.java" />
         <option value="$PROJECT_DIR$/src/gameboard/Main.java" />
         <option value="$PROJECT_DIR$/src/gameboard/Maze.java" />
         <option value="$PROJECT_DIR$/src/gameboard/Score.java" />
         <option value="$PROJECT_DIR$/src/gameboard/SetupController.java" />
         <option value="$PROJECT_DIR$/src/gameboard/ShowHighScore.java" />
+        <option value="$PROJECT_DIR$/src/gameboard/ShowScores.java" />
+        <option value="$PROJECT_DIR$/src/gameboard/GameManager.java" />
       </list>
     </option>
   </component>
@@ -289,7 +345,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544337947598" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544338098235" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -574,7 +630,14 @@
       <option name="project" value="LOCAL" />
       <updated>1544337221651</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="javadocs showscores">
+      <created>1544337999839</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1544337999839</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -684,7 +747,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="made a scoreboard pop up with sorted scores" />
     <MESSAGE value="sorted round number for score pop up" />
     <MESSAGE value="fixed bug where restarting game would not clear lists" />
     <MESSAGE value="fixed bug where score would -10 from r2&amp;3" />
@@ -709,7 +771,8 @@
     <MESSAGE value="organised packages" />
     <MESSAGE value="organised packages and bug fixes" />
     <MESSAGE value="javadocs calculatescore" />
-    <option name="LAST_COMMIT_MESSAGE" value="javadocs calculatescore" />
+    <MESSAGE value="javadocs showscores" />
+    <option name="LAST_COMMIT_MESSAGE" value="javadocs showscores" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -907,51 +970,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="44" selection-start-line="9" selection-end-line="44" />
-          <folding>
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/Maze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="136" selection-start-line="36" selection-start-column="12" selection-end-line="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="289" selection-start-line="289" selection-end-line="289" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/ShowScores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/ColourSet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -990,6 +1008,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/ShowScores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/ShowHighScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/SetupController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1000,10 +1035,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/ShowHighScore.java">
+    <entry file="file://$PROJECT_DIR$/src/gameboard/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="135">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+          <folding>
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1119#1120#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
+            <element signature="e#1199#1200#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1280#1281#0" expanded="true" />
+            <element signature="e#1309#1310#0" expanded="true" />
+            <element signature="e#1350#1351#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="e#1448#1449#0" expanded="true" />
+            <element signature="e#1477#1478#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+            <element signature="e#1541#1542#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#1610#1611#0" expanded="true" />
+            <element signature="e#1645#1646#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
