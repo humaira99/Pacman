@@ -8,6 +8,9 @@ import java.io.File;
 import java.io.FileWriter;
 import java.util.*;
 
+/**
+ * Writes username and score to a file and reads from that file to generate the highscore list
+ */
 public class ScoreFile {
 
     public GameManager game;
@@ -16,10 +19,18 @@ public class ScoreFile {
     public static ArrayList<String> name = new ArrayList<>();
     public static ArrayList<Integer> score = new ArrayList<>();
 
-
+    /**
+     * Constructor
+     *
+     * @param game The game instance
+     */
     public ScoreFile(GameManager game) {
         this.game = game;
     }
+
+    /**
+     * Writes the username that the player inputted on the start screen with their score to the highscore text file
+     */
 
     public void writeToFile() {
         try {
@@ -35,6 +46,12 @@ public class ScoreFile {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Reads the username and score from the file and adds the values to HashMap
+     * Sorts through the hashmap and orders the scores to find the top 10 scores and their usernames
+     * Adds top 10 in to another list to be printed by the highscore pop up screen
+     */
 
     public void readFromFile() {
 
