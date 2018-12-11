@@ -209,7 +209,7 @@ public class GameManager {
      */
     public void drawBoard() {
 
-        this.maze.CreateMaze(root);
+        this.maze.CreateMazeHard(root);
 
         drawRow(new Integer[]{5, 17}, 0);
         drawRow(new Integer[]{1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 19, 20, 21}, 1);
@@ -233,11 +233,12 @@ public class GameManager {
      * Generates the ghosts for the pacman!
      */
     public void generateGhosts() {
+
+
         Image ghost1 = new Image ("characters/images/ghost1.png");
         Image ghost2 = new Image ("characters/images/ghost2.png");
         Image ghost3 = new Image ("characters/images/ghost3.png");
         Image ghost4 = new Image ("characters/images/ghost4.png");
-
 
         this.ghosts.add(new Ghost(18.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost1, maze, this));
         this.ghosts.add(new Ghost(22.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost2, maze, this));

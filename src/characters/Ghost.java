@@ -28,8 +28,7 @@ public class Ghost extends Rectangle implements Runnable {
 
     /**
      *
-     * Creates a single instance of pacman (singleton pattern)
-     * Loads an image of pacman as the icon
+     * Loads an image of ghost as the icon
      * @param x x-coordinate of ghost on the board
      * @param y y-coordinate of ghost on the board
      * @param img Ghost image for icon
@@ -37,7 +36,6 @@ public class Ghost extends Rectangle implements Runnable {
      * @param gameManager Game instance
      *
      */
-
     public Ghost(double x, double y, Image img, Maze maze, GameManager gameManager) {
         this.getX();
         this.getY();
@@ -60,7 +58,6 @@ public class Ghost extends Rectangle implements Runnable {
      * @param exclude2 Doesn't allow the ghost to move in this direction
      * @return Random direction the ghost should move
      */
-
     private String getRandomDirection(String exclude1, String exclude2) {
         String[] directions = {"left", "right", "up", "down"};
         int rnd = new Random().nextInt(directions.length);

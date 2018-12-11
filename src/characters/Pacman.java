@@ -26,15 +26,12 @@ public class Pacman extends Circle {
 
     /**
      *
-     * Creates a single instance of pacman (singleton pattern)
      * Loads an image of pacman as the icon
      * @param game GameManager instance
      * @param x x-coordinate of pacman on the board
      * @param y y-coordinate of pacman on the board
      *
      */
-
-
     public Pacman(GameManager game, double x, double y) {
         this.setCenterX(x);
         this.setCenterY(y);
@@ -44,6 +41,14 @@ public class Pacman extends Circle {
         this.game = game;
     }
 
+    /**
+     *
+     * Creates a single instance of pacman (singleton pattern) If there is no pacman made already: creates one. If there is - returns existing pacman
+     * @param game GameManager instance
+     * @param x x-coordinate of pacman
+     * @param y y-coordinate of pacman
+     * @return single instance of pacman
+     */
     public static Pacman getInstance(GameManager game, double x, double y){
         if(pacman == null){
             pacman = new Pacman(game, x, y);
