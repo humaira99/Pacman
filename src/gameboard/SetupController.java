@@ -2,15 +2,9 @@ package gameboard;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
-import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.ColorPicker;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
-import javafx.stage.Stage;
 
 /**
  * Controller to control action events of the Setup window
@@ -40,7 +34,7 @@ public class SetupController {
      * When start is pressed on the setup window - the game will start
      * @param actionEvent When the start button is pressed on the setup window
      */
-    @FXML
+   /* @FXML
     public void setStartPressed(javafx.event.ActionEvent actionEvent) {
 
         Stage stage = new Stage();
@@ -67,6 +61,17 @@ public class SetupController {
 
         stage.show();
         contentset.getScene().getWindow().hide();
+    }*/
+
+    @FXML
+    public void setStartPressed(javafx.event.ActionEvent actionEvent) {
+        try {
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("../screens/fxml/levels.fxml"));
+            Parent root1 = (Parent) fxmlLoader1.load();
+            contentset.getChildren().setAll(root1);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

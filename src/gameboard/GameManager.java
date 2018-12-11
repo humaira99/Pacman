@@ -39,6 +39,7 @@ public class GameManager {
     private Score scoreBoard;
     private boolean gameEnded;
     private int cookiesEaten;
+    public static int level;
 
     public void setScore(int score) {
         this.score = score;
@@ -167,7 +168,15 @@ public class GameManager {
             root.getChildren().clear();
             this.cookieSet.clear();
             this.ghosts.clear();
-            this.drawBoardEasy();
+            if(level == 1){
+                this.drawBoardEasy();
+            }
+            if(level == 2){
+                this.drawBoardIntermediate();
+            }
+            if(level == 3){
+                this.drawBoardHard();
+            }
             this.pacman.setCenterX(2.5 * BarObstacle.THICKNESS);
             this.pacman.setCenterY(2.5 * BarObstacle.THICKNESS);
             this.lifes = 3;
@@ -234,7 +243,7 @@ public class GameManager {
      */
     public void drawBoardIntermediate() {
 
-        this.maze.CreateMazeEasy(root);
+        this.maze.CreateMazeIntermediate(root);
 
         drawRow(new Integer[]{5, 17}, 0);
         drawRow(new Integer[]{1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 19, 20, 21}, 1);
@@ -259,7 +268,7 @@ public class GameManager {
      */
     public void drawBoardHard() {
 
-        this.maze.CreateMazeEasy(root);
+        this.maze.CreateMazeHard(root);
 
         drawRow(new Integer[]{5, 17, 11}, 0);
         drawRow(new Integer[]{1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21}, 1);
@@ -291,11 +300,18 @@ public class GameManager {
         Image ghost2 = new Image ("characters/images/ghost2.png");
         Image ghost3 = new Image ("characters/images/ghost3.png");
         Image ghost4 = new Image ("characters/images/ghost4.png");
+        Image ghost5 = new Image ("characters/images/ghost5.png");
 
         this.ghosts.add(new Ghost(18.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost1, maze, this));
         this.ghosts.add(new Ghost(22.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost2, maze, this));
         this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost3, maze, this));
-        this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
+        if(level == 2){
+            this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
+        }
+        if(level == 3){
+            this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
+            this.ghosts.add(new Ghost(20.0 * BarObstacle.THICKNESS, 11.0 * BarObstacle.THICKNESS, ghost5, maze, this));
+        }
     }
 
     /**
