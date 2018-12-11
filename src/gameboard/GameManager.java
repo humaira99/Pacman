@@ -167,7 +167,7 @@ public class GameManager {
             root.getChildren().clear();
             this.cookieSet.clear();
             this.ghosts.clear();
-            this.drawBoard();
+            this.drawBoardHard();
             this.pacman.setCenterX(2.5 * BarObstacle.THICKNESS);
             this.pacman.setCenterY(2.5 * BarObstacle.THICKNESS);
             this.lifes = 3;
@@ -207,7 +207,7 @@ public class GameManager {
     /**
      * Draws the board of the game with the cookies and the Pacman
      */
-    public void drawBoard() {
+    public void drawBoardIntermediate() {
 
         this.maze.CreateMazeHard(root);
 
@@ -228,6 +228,33 @@ public class GameManager {
         root.getChildren().addAll(this.ghosts);
         this.scoreBoard = new Score(root);
     }
+
+    /**
+     * Draws the board of the game with the cookies and the Pacman
+     */
+    public void drawBoardHard() {
+
+        this.maze.CreateMazeHard(root);
+
+        drawRow(new Integer[]{5, 17, 11}, 0);
+        drawRow(new Integer[]{1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21}, 1);
+        drawRow(new Integer[]{1, 21}, 2);
+        drawRow(new Integer[]{1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21}, 3);
+        drawRow(new Integer[]{1, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 19, 21}, 4);
+        drawRow(new Integer[]{3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19}, 5);
+        drawRow(new Integer[]{1, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 21}, 6);
+        drawRow(new Integer[]{1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21}, 7);
+        drawRow(new Integer[]{1, 21}, 8);
+        drawRow(new Integer[]{1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21}, 9);
+        drawRow(new Integer[]{5, 11, 17}, 10);
+
+        root.getChildren().add(this.pacman);
+        this.generateGhosts();
+        root.getChildren().addAll(this.ghosts);
+        this.scoreBoard = new Score(root);
+    }
+
+
 
     /**
      * Generates the ghosts for the pacman!

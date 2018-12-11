@@ -59,7 +59,7 @@ public class SetupController {
         }
         GameManager gameManager = new GameManager(root);
 
-        gameManager.drawBoard();
+        gameManager.drawBoardHard();
 
         theScene.addEventHandler(KeyEvent.KEY_PRESSED, event -> gameManager.movePacman(event));
         theScene.addEventHandler(KeyEvent.KEY_RELEASED, event -> gameManager.stopPacman(event));
