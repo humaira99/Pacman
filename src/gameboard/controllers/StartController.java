@@ -1,4 +1,4 @@
-package screens;
+package gameboard.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,7 +27,7 @@ public class StartController {
     @FXML
     public void startButtonPressed(javafx.event.ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/setup.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/setup.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             content.getChildren().setAll(root);
         } catch (Exception e) {

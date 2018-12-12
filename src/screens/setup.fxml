@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameboard.SetupController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameboard.controllers.SetupController">
    <children>
       <GridPane fx:id="contentset" maxHeight="600.0" maxWidth="1000.0" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0">
         <columnConstraints>

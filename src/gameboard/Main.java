@@ -20,7 +20,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage theStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../screens/fxml/start.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../screens/start.fxml"));
         theStage.setTitle( "Pacman" );
 
         Group root1 = new Group();

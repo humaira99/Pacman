@@ -1,7 +1,7 @@
 package gameboard.scores;
 
 import gameboard.GameManager;
-import screens.StartController;
+import gameboard.controllers.StartController;
 
 import java.io.BufferedWriter;
 import java.io.File;

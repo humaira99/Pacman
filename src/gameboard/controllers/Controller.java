@@ -1,5 +1,6 @@
-package gameboard;
+package gameboard.controllers;
 
+import gameboard.scores.ShowHighScore;
 import gameboard.scores.CalculateScore;
 import gameboard.scores.ScoreFile;
 import javafx.fxml.FXML;

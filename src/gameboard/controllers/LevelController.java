@@ -1,5 +1,7 @@
-package gameboard;
+package gameboard.controllers;
 
+import gameboard.ColourSet;
+import gameboard.GameManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -43,7 +45,7 @@ public class LevelController {
     public void backButton(javafx.event.ActionEvent actionEvent) {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../screens/fxml/setup.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/setup.fxml"));
             Parent root = fxmlLoader.load();
             windw.getChildren().setAll(root);
         } catch (Exception e) {

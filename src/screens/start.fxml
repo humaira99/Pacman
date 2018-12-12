@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="content" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="screens.StartController">
+<GridPane fx:id="content" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameboard.controllers.StartController">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
@@ -25,7 +25,7 @@
                <children>
                   <ImageView fitHeight="457.0" fitWidth="998.0" layoutY="-5.0" AnchorPane.topAnchor="-5.0">
                      <image>
-                        <Image url="@../../characters/images/pacmanstart.png" />
+                        <Image url="@/characters/images/pacmanstart.png" />
                      </image>
                   </ImageView>
                </children>

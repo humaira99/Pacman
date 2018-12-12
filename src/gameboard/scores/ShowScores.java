@@ -1,5 +1,6 @@
-package gameboard;
+package gameboard.scores;
 
+import gameboard.controllers.Controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -15,12 +16,12 @@ public class ShowScores {
      */
     public void ShowScores() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../screens/fxml/score.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/score.fxml"));
             Parent root = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Score");
             Scene theScene = new Scene(root);
-            theScene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+            theScene.getStylesheets().add(getClass().getResource("/gameboard/style.css").toExternalForm());
             stage.setScene(theScene);
             Controller controller = fxmlLoader.getController();
             controller.scores();

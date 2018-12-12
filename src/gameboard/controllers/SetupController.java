@@ -1,5 +1,6 @@
-package gameboard;
+package gameboard.controllers;
 
+import gameboard.ColourSet;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,7 +22,7 @@ public class SetupController {
     @FXML
     public void setBackPressed(javafx.event.ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("../screens/fxml/start.fxml"));
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/screens/start.fxml"));
             Parent root1 = (Parent) fxmlLoader1.load();
             contentset.getChildren().setAll(root1);
         } catch (Exception e) {
@@ -66,7 +67,7 @@ public class SetupController {
     @FXML
     public void setStartPressed(javafx.event.ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("../screens/fxml/level.fxml"));
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/screens/level.fxml"));
             Parent root = (Parent) fxmlLoader1.load();
             contentset.getChildren().setAll(root);
         } catch (Exception e) {

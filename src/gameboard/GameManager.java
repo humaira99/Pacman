@@ -6,6 +6,7 @@ import characters.Ghost;
 import characters.Pacman;
 import gameboard.scores.CalculateScore;
 import gameboard.scores.ScoreFile;
+import gameboard.scores.ShowScores;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Group;
 import javafx.scene.image.Image;
@@ -82,7 +83,7 @@ public class GameManager {
     /**
      * Constructor
      */
-    GameManager(Group root) {
+    public GameManager(Group root) {
         this.root = root;
         this.maze = Maze.getInstance();
         this.pacman = Pacman.getInstance(this, 2.5 * BarObstacle.THICKNESS, 2.5 * BarObstacle.THICKNESS);
