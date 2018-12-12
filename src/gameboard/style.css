@@ -1,6 +1,6 @@
 
 .root{
-    -fx-font-size: 12pt;
+    -fx-font-size: 14pt;
     -fx-font-family: "Veranda";
     -fx-base: #FF2D00;
     -fx-background: #000000;
@@ -21,7 +21,7 @@
     -fx-base: #8b4513;
 }
 
-#setStart, #startButton{
+#setStart, #startButton, #easy, #middle, #hard{
     -fx-background: #FDEE03;
     -fx-base: #FDEE03;
 }

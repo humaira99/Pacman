@@ -9,44 +9,43 @@ import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class LevelController {
 
     @FXML
-    AnchorPane AnchorPane;
+    private AnchorPane windw;
 
+    @FXML
     public void easyLevel(ActionEvent actionEvent) {
         GameManager.level = 1;
         setStartPressed(1);
     }
 
+    @FXML
     public void middleLevel(ActionEvent actionEvent) {
         GameManager.level = 2;
         setStartPressed(2);
     }
 
+    @FXML
     public void hardLevel(ActionEvent actionEvent) {
         GameManager.level = 3;
         setStartPressed(3);
 
     }
 
-    @FXML
-    GridPane wind;
-
     /**
      * When back is pressed on the setup window - takes the player to the previous start page
      * @param actionEvent When the back button is pressed on the setup page
      */
     @FXML
-    public void backButton(ActionEvent actionEvent) {
+    public void backButton(javafx.event.ActionEvent actionEvent) {
 
         try {
-            FXMLLoader fxmlLoader3 = new FXMLLoader(getClass().getResource("../screens/fxml/setup.fxml"));
-            Parent root3 = (Parent) fxmlLoader3.load();
-            wind.getChildren().setAll(root3);
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../screens/fxml/setup.fxml"));
+            Parent root = fxmlLoader.load();
+            windw.getChildren().setAll(root);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -78,7 +77,7 @@ public class LevelController {
         theScene.addEventHandler(KeyEvent.KEY_PRESSED, event -> gameManager.restartGame(event));
 
         stage.show();
-        wind.getScene().getWindow().hide();
+        windw.getScene().getWindow().hide();
     }
 
 

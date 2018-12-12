@@ -66,9 +66,9 @@ public class SetupController {
     @FXML
     public void setStartPressed(javafx.event.ActionEvent actionEvent) {
         try {
-            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("../screens/fxml/levels.fxml"));
-            Parent root1 = (Parent) fxmlLoader1.load();
-            contentset.getChildren().setAll(root1);
+            FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("../screens/fxml/level.fxml"));
+            Parent root = (Parent) fxmlLoader1.load();
+            contentset.getChildren().setAll(root);
         } catch (Exception e) {
             e.printStackTrace();
         }
