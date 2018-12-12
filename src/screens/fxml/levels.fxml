@@ -3,32 +3,37 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="contents" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameboard.LevelController">
-  <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-  </columnConstraints>
-  <rowConstraints>
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-  </rowConstraints>
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameboard.LevelController">
    <children>
-      <Button fx:id="easy" mnemonicParsing="false" onAction="#easyLevel" prefHeight="60.0" prefWidth="120.0" text="START" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-      <Button fx:id="medium" mnemonicParsing="false" onAction="#middleLevel" prefHeight="60.0" prefWidth="120.0" text="START" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-      <Button fx:id="hard" mnemonicParsing="false" onAction="#hardLevel" prefHeight="60.0" prefWidth="120.0" text="START" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="100.0" text="Easy" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="100.0" text="Intermediate" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="100.0" text="Hard" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
-      <Button fx:id="back" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#backButton" prefHeight="47.0" prefWidth="96.0" text="BACK" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
-         <GridPane.margin>
-            <Insets bottom="5.0" left="5.0" />
-         </GridPane.margin>
-      </Button>
+      <GridPane fx:id="wind" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="easy" mnemonicParsing="false" onAction="#easyLevel" prefHeight="60.0" prefWidth="120.0" text="START" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="medium" mnemonicParsing="false" onAction="#middleLevel" prefHeight="60.0" prefWidth="120.0" text="START" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Button fx:id="hard" mnemonicParsing="false" onAction="#hardLevel" prefHeight="60.0" prefWidth="120.0" text="START" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="100.0" text="Easy" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="100.0" text="Intermediate" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="100.0" text="Hard" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="back" alignment="CENTER" contentDisplay="BOTTOM" mnemonicParsing="false" onAction="#backButton" prefHeight="47.0" prefWidth="96.0" text="BACK" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
    </children>
-</GridPane>
+</AnchorPane>
