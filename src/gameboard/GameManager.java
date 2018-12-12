@@ -8,6 +8,7 @@ import gameboard.scores.CalculateScore;
 import gameboard.scores.ScoreFile;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Group;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -18,6 +19,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+
+import static gameboard.LevelController.canvas;
 
 /**
  * Sets up game by drawing the board, generating the ghosts and moving/stopping pacman
@@ -176,6 +179,12 @@ public class GameManager {
             }
             if(level == 3){
                 this.drawBoardHard();
+            }
+
+            if(ColourSet.background != null) {
+                GraphicsContext gc = canvas.getGraphicsContext2D();
+                gc.setFill(ColourSet.background);
+                gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
             }
             this.pacman.setCenterX(2.5 * BarObstacle.THICKNESS);
             this.pacman.setCenterY(2.5 * BarObstacle.THICKNESS);
