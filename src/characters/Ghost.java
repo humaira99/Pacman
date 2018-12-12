@@ -124,6 +124,15 @@ public class Ghost extends Rectangle implements Runnable {
                 }
                 break;
         }
+        if(this.getX() < 0.0){
+            this.setX(1250);
+
+        }
+        if(this.getX() > 1300){
+            this.setX(50);
+
+        }
+
     }
 
     /**

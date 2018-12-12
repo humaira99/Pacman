@@ -96,6 +96,7 @@ public class GameManager {
         this.lifes = 3;
         this.score = 0;
         this.cookiesEaten = 0;
+        this.level = level;
 
     }
 
@@ -154,8 +155,19 @@ public class GameManager {
         }
         javafx.scene.text.Text endGame = new javafx.scene.text.Text("Game Over, press ESC to restart");
         ScoreFile scoreFile = new ScoreFile(this);
-        scoreFile.writeToFile();
-        scoreFile.readFromFile();
+        if(level == 1){
+            scoreFile.writeToFileEasy();
+            scoreFile.readFromFileEasy();
+        }
+        if(level == 2){
+            scoreFile.writeToFileInt();
+            scoreFile.readFromFileInt();
+        }
+        if(level == 3){
+            scoreFile.writeToFileHard();
+            scoreFile.readFromFileHard();
+        }
+
         ShowScores showScores = new ShowScores();
         showScores.ShowScores();
         endGame.setX(BarObstacle.THICKNESS * 3);
@@ -315,12 +327,14 @@ public class GameManager {
         this.ghosts.add(new Ghost(18.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost1, maze, this));
         this.ghosts.add(new Ghost(22.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost2, maze, this));
         this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost3, maze, this));
+
         if(level == 2){
             this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
         }
         if(level == 3){
             this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
-            this.ghosts.add(new Ghost(20.0 * BarObstacle.THICKNESS, 11.0 * BarObstacle.THICKNESS, ghost5, maze, this));
+            this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.0 * BarObstacle.THICKNESS, ghost5, maze, this));
+
         }
     }
 
