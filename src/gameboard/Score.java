@@ -36,7 +36,7 @@ public class Score {
         score.setFill(Color.MAGENTA);
         score.setFont(Font.font("Arial", 30));
 
-        lifes.setFill(Color.MAROON);
+        lifes.setFill(Color.LIGHTSEAGREEN);
         lifes.setFont(Font.font("Arial", 30));
 
         Image image = new Image("characters/images/pacman.png");
@@ -52,12 +52,12 @@ public class Score {
         imageView3.setX(BarObstacle.THICKNESS * 26);
         imageView3.setY(BarObstacle.THICKNESS * 26);
 
-        imageView.setFitHeight(50);
-        imageView.setFitWidth(50);
-        imageView2.setFitHeight(50);
-        imageView2.setFitWidth(50);
-        imageView3.setFitHeight(50);
-        imageView3.setFitWidth(50);
+        imageView.setFitHeight(40);
+        imageView.setFitWidth(40);
+        imageView2.setFitHeight(40);
+        imageView2.setFitWidth(40);
+        imageView3.setFitHeight(40);
+        imageView3.setFitWidth(40);
 
         root.getChildren().add(score);
         root.getChildren().add(lifes);

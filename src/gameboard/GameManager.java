@@ -195,6 +195,7 @@ public class GameManager {
         if (event.getCode() == KeyCode.ESCAPE && gameEnded) {
             root.getChildren().clear();
             this.cookieSet.clear();
+            this.cherrySet.clear();
             this.ghosts.clear();
             if(level == 1){
                 this.drawBoardEasy();
@@ -291,17 +292,23 @@ public class GameManager {
 
         this.maze.CreateMazeIntermediate(root);
 
-        drawRow(new Integer[]{5, 17}, 0);
+        drawRow(new Integer[]{5, 17, 22}, 0);
         drawRow(new Integer[]{1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 19, 20, 21}, 1);
-        drawRow(new Integer[]{1, 21}, 2);
+        drawRow(new Integer[]{1, 11, 21}, 2);
         drawRow(new Integer[]{1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21}, 3);
-        drawRow(new Integer[]{1, 7, 8, 9, 10, 11, 12, 13, 14, 15, 21}, 4);
+        drawRow(new Integer[]{1, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18, 21}, 4);
         drawRow(new Integer[]{3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19}, 5);
         drawRow(new Integer[]{1, 7, 8, 9, 10, 11, 12, 13, 14, 15, 21}, 6);
-        drawRow(new Integer[]{1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21}, 7);
+        drawRow(new Integer[]{1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21}, 7);
         drawRow(new Integer[]{1, 21}, 8);
         drawRow(new Integer[]{1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 19, 20, 21}, 9);
-        drawRow(new Integer[]{5, 17}, 10);
+        drawRow(new Integer[]{1, 5, 17, 18}, 10);
+
+        drawRowCherry(new Integer[]{22}, 0);
+        drawRowCherry(new Integer[]{11}, 2);
+        drawRowCherry(new Integer[]{18}, 4);
+        drawRowCherry(new Integer[]{2}, 7);
+        drawRowCherry(new Integer[]{1, 18}, 10);
 
         root.getChildren().add(this.pacman);
         this.generateGhosts();
@@ -316,17 +323,25 @@ public class GameManager {
 
         this.maze.CreateMazeHard(root);
 
-        drawRow(new Integer[]{5, 17, 11}, 0);
+        drawRow(new Integer[]{5, 17, 10, 11}, 0);
         drawRow(new Integer[]{1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21}, 1);
-        drawRow(new Integer[]{1, 21}, 2);
+        drawRow(new Integer[]{1, 11, 21}, 2);
         drawRow(new Integer[]{1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21}, 3);
-        drawRow(new Integer[]{1, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 19, 21}, 4);
+        drawRow(new Integer[]{1, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 18, 19, 21}, 4);
         drawRow(new Integer[]{3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19}, 5);
-        drawRow(new Integer[]{1, 3, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 21}, 6);
+        drawRow(new Integer[]{1, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 21}, 6);
         drawRow(new Integer[]{1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 21}, 7);
-        drawRow(new Integer[]{1, 21}, 8);
+        drawRow(new Integer[]{1, 11, 21}, 8);
         drawRow(new Integer[]{1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18, 19, 20, 21}, 9);
-        drawRow(new Integer[]{5, 11, 17}, 10);
+        drawRow(new Integer[]{5, 11, 17, 22}, 10);
+
+        drawRowCherry(new Integer[]{10}, 0);
+        drawRowCherry(new Integer[]{11}, 2);
+        drawRowCherry(new Integer[]{18}, 4);
+        drawRowCherry(new Integer[]{11}, 5);
+        drawRowCherry(new Integer[]{4}, 6);
+        drawRowCherry(new Integer[]{11}, 8);
+        drawRowCherry(new Integer[]{22}, 10);
 
         root.getChildren().add(this.pacman);
         this.generateGhosts();
