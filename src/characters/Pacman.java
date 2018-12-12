@@ -81,6 +81,7 @@ public class Pacman extends Circle {
                             pacman.setRotate(180);
                             pacman.setCenterX(pacman.getCenterX() - step);
                             coalition.checkCookieCoalition(pacman, "x");
+                            coalition.checkCherryCoalition(pacman, "x");
                             coalition.checkGhostCoalition();
                         }
                         break;
@@ -89,6 +90,7 @@ public class Pacman extends Circle {
                             pacman.setRotate(0);
                             pacman.setCenterX(pacman.getCenterX() + step);
                             coalition.checkCookieCoalition(pacman, "x");
+                            coalition.checkCherryCoalition(pacman, "x");
                             coalition.checkGhostCoalition();
                         }
                         break;
@@ -97,6 +99,7 @@ public class Pacman extends Circle {
                             pacman.setRotate(270);
                             pacman.setCenterY(pacman.getCenterY() - step);
                             coalition.checkCookieCoalition(pacman, "y");
+                            coalition.checkCherryCoalition(pacman, "y");
                             coalition.checkGhostCoalition();
                         }
                         break;
@@ -105,6 +108,7 @@ public class Pacman extends Circle {
                             pacman.setRotate(90);
                             pacman.setCenterY(pacman.getCenterY() + step);
                             coalition.checkCookieCoalition(pacman, "y");
+                            coalition.checkCherryCoalition(pacman, "y");
                             coalition.checkGhostCoalition();
                         }
                         break;

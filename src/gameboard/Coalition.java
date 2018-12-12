@@ -1,5 +1,6 @@
 package gameboard;
 
+import characters.Cherry;
 import characters.Cookie;
 import characters.Ghost;
 import characters.Pacman;
@@ -51,10 +52,13 @@ public class Coalition {
         for (Cookie cookie:game.getCookieSet()) {
             double cookieCenterX = cookie.getCenterX();
             double cookieCenterY = cookie.getCenterY();
+
             double cookieLeftEdge = cookieCenterX - cookie.getRadius();
             double cookieRightEdge = cookieCenterX + cookie.getRadius();
             double cookieTopEdge = cookieCenterY - cookie.getRadius();
             double cookieBottomEdge = cookieCenterY + cookie.getRadius();
+
+
             if (axis.equals("x")) {
                 // pacman goes right
 
@@ -74,6 +78,7 @@ public class Coalition {
                 if ((cookieCenterX >= pacmanLeftEdge && cookieCenterX <= pacmanRightEdge) && (pacmanTopEdge <= cookieBottomEdge && pacmanTopEdge >= cookieTopEdge)) {
                     cookieEaten(cookie);
                 }
+
             }
             game.getScoreBoard().getScore().setText("Score: " + this.game.getScore());
             if (game.getCookiesEaten() == cookieSet.size()) {
@@ -96,6 +101,64 @@ public class Coalition {
         }
         cookie.hide();
     }
+
+    /**
+     * Checks if the Pacman touches a cherry
+     * @param pacman pacman object
+     * @param axis x or y axis to check which way pacman is going
+     */
+    public void checkCherryCoalition(Pacman pacman, String axis){
+        double pacmanCenterY = pacman.getCenterY();
+        double pacmanCenterX = pacman.getCenterX();
+        double pacmanLeftEdge = pacmanCenterX - pacman.getRadius();
+        double pacmanRightEdge = pacmanCenterX + pacman.getRadius();
+        double pacmanTopEdge = pacmanCenterY - pacman.getRadius();
+        double pacmanBottomEdge = pacmanCenterY + pacman.getRadius();
+
+        for (Cherry cherry:game.getCherrySet()) {
+            double cherryCenterX = cherry.getCenterX();
+            double cherryCenterY = cherry.getCenterY();
+            double cherryLeftEdge = cherryCenterX - cherry.getRadius();
+            double cherryRightEdge = cherryCenterX + cherry.getRadius();
+            double cherryTopEdge = cherryCenterY - cherry.getRadius();
+            double cherryBottomEdge = cherryCenterY + cherry.getRadius();
+
+            if (axis.equals("x")) {
+                // pacman goes right
+
+                if ((cherryCenterY >= pacmanTopEdge && cherryCenterY <= pacmanBottomEdge) && (pacmanRightEdge >= cherryLeftEdge && pacmanRightEdge <= cherryRightEdge)) {
+                    cherryEaten(cherry);
+                }
+                // pacman goes left
+                if ((cherryCenterY >= pacmanTopEdge && cherryCenterY <= pacmanBottomEdge) && (pacmanLeftEdge >= cherryLeftEdge && pacmanLeftEdge <= cherryRightEdge)) {
+                    cherryEaten(cherry);
+                }
+            } else {
+                // pacman goes up
+                if ((cherryCenterX >= pacmanLeftEdge && cherryCenterX <= pacmanRightEdge) && (pacmanBottomEdge >= cherryTopEdge && pacmanBottomEdge <= cherryBottomEdge)) {
+                    cherryEaten(cherry);
+                }
+                // pacman goes down
+                if ((cherryCenterX >= pacmanLeftEdge && cherryCenterX <= pacmanRightEdge) && (pacmanTopEdge <= cherryBottomEdge && pacmanTopEdge >= cherryTopEdge)) {
+                    cherryEaten(cherry);
+                }
+            }
+        }
+    }
+
+    /**
+     * Hides the cherry when pacman touches it and increases score
+     * @param cherry gets the specific cookie the pacman touches
+     */
+    public void cherryEaten(Cherry cherry){
+        if (cherry.isVisible()) {
+            int score = game.getScore();
+            game.setScore(score + cherry.getValue());
+
+        }
+        cherry.hide();
+    }
+
     /**
      * Checks if pacman is touching a ghost
      * If touching a ghost - lose a life
