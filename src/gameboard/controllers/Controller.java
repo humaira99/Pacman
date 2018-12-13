@@ -49,10 +49,7 @@ public class Controller {
         middleScore.setText("" + CalculateScore.sc.get(1));
         lowScore.setText("" + CalculateScore.sc.get(0));
 
-
         totalScore.setText("" + CalculateScore.total);
-
-
 
     }
 

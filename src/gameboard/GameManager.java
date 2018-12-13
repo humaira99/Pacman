@@ -5,6 +5,7 @@ import characters.Cherry;
 import characters.Cookie;
 import characters.Ghost;
 import characters.Pacman;
+import gameboard.controllers.winController;
 import gameboard.scores.CalculateScore;
 import gameboard.scores.ScoreFile;
 import gameboard.scores.ShowScores;
@@ -161,18 +162,21 @@ public class GameManager {
             scboard.add(score);
             scboard.add(0);
             scboard.add(0);
+            winController.getInstance();
         }
         if(lifes == 2){
             scboard.add(score);
             scboard.add(0);
+            winController.getInstance();
         }
         if(lifes == 1){
             scboard.add(score);
+            winController.getInstance();
 
         }
 
         javafx.scene.text.Text endGame = new javafx.scene.text.Text("Game Over, press ESC to restart");
-        ScoreFile scoreFile = new ScoreFile(this);
+        ScoreFile scoreFile = ScoreFile.getInstance(this);
 
         if(level == 1){
             scoreFile.writeToFileEasy();
@@ -221,7 +225,7 @@ public class GameManager {
 
             this.pacman.setCenterX(2.5 * BarObstacle.THICKNESS);
             this.pacman.setCenterY(2.5 * BarObstacle.THICKNESS);
-            this.lifes = 3;
+            lifes = 3;
             this.score = 0;
             this.cookiesEaten = 0;
 
@@ -377,15 +381,15 @@ public class GameManager {
         Image ghost5 = new Image ("characters/images/ghost5.png");
 
         //this.ghosts.add(new Ghost(18.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost1, maze, this));
-        //this.ghosts.add(new Ghost(22.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost2, maze, this));
-        //this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost3, maze, this));
+       // this.ghosts.add(new Ghost(22.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost2, maze, this));
+       // this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost3, maze, this));
 
         if(level == 2){
           // this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
         }
         if(level == 3){
-          //  this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
-          //  this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.0 * BarObstacle.THICKNESS, ghost5, maze, this));
+           // this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
+           // this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.0 * BarObstacle.THICKNESS, ghost5, maze, this));
 
         }
     }

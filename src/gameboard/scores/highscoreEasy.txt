@@ -1,5 +1,3 @@
-humaira
-60
 hums
 60
 akjsd
@@ -36,17 +34,17 @@ humh
 120
 sd
 95
-sd
+julie
 240
 hum
 170
-hum
+peer
 195
 win
 905
 test
 905
-hjk
+compsci
 890
-nk
+pacman
 905

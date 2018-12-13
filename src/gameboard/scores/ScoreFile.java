@@ -18,7 +18,9 @@ public class ScoreFile {
     public static Map<String, Integer> sortedMap = new LinkedHashMap<>();
     public static ArrayList<String> name = new ArrayList<>();
     public static ArrayList<Integer> score = new ArrayList<>();
+    public int write = 0;
 
+    public static ScoreFile scfile;
     /**
      * Constructor
      *
@@ -28,22 +30,31 @@ public class ScoreFile {
         this.game = game;
     }
 
+    public static ScoreFile getInstance(GameManager game){
+        if(scfile == null){
+            scfile = new ScoreFile(game);
+        }
+        return scfile;
+    }
     /**
      * Writes the username that the player inputted on the start screen with their score to the highscore text file for the easy level
      */
     public void writeToFileEasy() {
-        try {
-            File highscoreeasy = new File("src/gameboard/scores/highscoreEasy.txt");
+        if(write == 0) {
+            try {
+                File highscoreeasy = new File("src/gameboard/scores/highscoreEasy.txt");
 
-            FileWriter fileWriter = new FileWriter(highscoreeasy, true);
-            BufferedWriter writer = new BufferedWriter(fileWriter);
+                FileWriter fileWriter = new FileWriter(highscoreeasy, true);
+                BufferedWriter writer = new BufferedWriter(fileWriter);
 
-            writer.write(StartController.uname + "\n");
-            writer.write(game.getScore() + "\n");
+                writer.write(StartController.uname + "\n");
+                writer.write(game.getScore() + "\n");
 
-            writer.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+                writer.close();
+                write++;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -51,19 +62,22 @@ public class ScoreFile {
      * Writes the username that the player inputted on the start screen with their score to the highscore text file for the intermediate level
      */
     public void writeToFileInt() {
-        try {
+        if(write == 0) {
+            try {
 
-            File highscoreInt = new File("src/gameboard/scores/highscoreInt.txt");
+                File highscoreInt = new File("src/gameboard/scores/highscoreInt.txt");
 
-            FileWriter fileWriter = new FileWriter(highscoreInt, true);
-            BufferedWriter writer = new BufferedWriter(fileWriter);
+                FileWriter fileWriter = new FileWriter(highscoreInt, true);
+                BufferedWriter writer = new BufferedWriter(fileWriter);
 
-            writer.write(StartController.uname + "\n");
-            writer.write(game.getScore() + "\n");
+                writer.write(StartController.uname + "\n");
+                writer.write(game.getScore() + "\n");
 
-            writer.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+                writer.close();
+                write++;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -71,19 +85,22 @@ public class ScoreFile {
      * Writes the username that the player inputted on the start screen with their score to the highscore text file for the hard level
      */
     public void writeToFileHard() {
-        try {
+        if (write == 0){
+            try {
 
-            File highscoreHard = new File("src/gameboard/scores/highscoreHard.txt");
+                File highscoreHard = new File("src/gameboard/scores/highscoreHard.txt");
 
-            FileWriter fileWriter = new FileWriter(highscoreHard, true);
-            BufferedWriter writer = new BufferedWriter(fileWriter);
+                FileWriter fileWriter = new FileWriter(highscoreHard, true);
+                BufferedWriter writer = new BufferedWriter(fileWriter);
 
-            writer.write(StartController.uname + "\n");
-            writer.write(game.getScore() + "\n");
+                writer.write(StartController.uname + "\n");
+                writer.write(game.getScore() + "\n");
 
-            writer.close();
-        } catch (Exception e) {
-            e.printStackTrace();
+                writer.close();
+                write++;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 
