@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane fx:id="content" xmlns="http://javafx.com/javafx/8.0.191" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameboard.controllers.StartController">
+<GridPane fx:id="content" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gameboard.controllers.StartController">
    <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
    </columnConstraints>
@@ -32,7 +32,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
-                  <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="449.0" layoutY="58.0" mnemonicParsing="false" onAction="#startButtonPressed" prefHeight="48.0" prefWidth="101.0" stylesheets="@../gameboard/style.css" text="START" />
+                  <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="449.0" layoutY="70.0" mnemonicParsing="false" onAction="#startButtonPressed" prefHeight="48.0" prefWidth="101.0" stylesheets="@../gameboard/style.css" text="START" />
                   <TextField fx:id="username" layoutX="499.0" layoutY="14.0" />
                   <Label alignment="CENTER" layoutX="334.0" layoutY="14.0" prefHeight="27.0" prefWidth="157.0" text="Enter Username:" />
                   <Label fx:id="validate" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="749.0" layoutY="28.0" prefHeight="90.0" prefWidth="242.0" />

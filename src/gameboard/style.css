@@ -1,7 +1,7 @@
 
 .root{
     -fx-font-size: 14pt;
-    -fx-font-family: "Century Gothic";
+    -fx-font-family: "Veranda";
     -fx-base: #FF2D00;
     -fx-background: #000000;
 }
@@ -39,4 +39,8 @@
 #validate{
     -fx-font-size: 11pt;
     -fx-text-fill: RED;
+}
+
+#username{
+    -fx-base: WHITE;
 }

@@ -47,6 +47,7 @@ public class StartController {
     public Boolean isInputValid() {
         if (username.getText() == null || username.getText().length() == 0) {
             validate.setText("Please enter a username");
+            username.setStyle("-fx-border-color: red; -fx-border-width: 3");
             return false;
         }
         else {
