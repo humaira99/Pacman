@@ -1,7 +1,7 @@
 
 .root{
     -fx-font-size: 14pt;
-    -fx-font-family: "Veranda";
+    -fx-font-family: "Century Gothic";
     -fx-base: #FF2D00;
     -fx-background: #000000;
 }
@@ -34,4 +34,9 @@
 #ursc{
     -fx-font-size: 14pt;
     -fx-text-fill: #FF2D00;
+}
+
+#validate{
+    -fx-font-size: 11pt;
+    -fx-text-fill: RED;
 }

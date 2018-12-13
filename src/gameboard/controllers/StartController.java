@@ -3,6 +3,7 @@ package gameboard.controllers;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
@@ -17,6 +18,9 @@ public class StartController {
     @FXML
     TextField username;
 
+    @FXML
+    Label validate;
+
     public static String uname;
 
     /**
@@ -26,13 +30,29 @@ public class StartController {
      */
     @FXML
     public void startButtonPressed(javafx.event.ActionEvent actionEvent) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/setup.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
-            content.getChildren().setAll(root);
-        } catch (Exception e) {
-            e.printStackTrace();
+
+        if(isInputValid() == Boolean.TRUE) {
+            try {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/setup.fxml"));
+                Parent root = (Parent) fxmlLoader.load();
+                content.getChildren().setAll(root);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            uname = username.getText();
         }
-        uname = username.getText();
     }
+
+    @FXML
+    public Boolean isInputValid() {
+        if (username.getText() == null || username.getText().length() == 0) {
+            validate.setText("Please enter a username");
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+
+
 }

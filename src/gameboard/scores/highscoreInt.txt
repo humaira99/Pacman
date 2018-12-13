@@ -48,3 +48,5 @@ humz
 90
 hgfhjkl
 205
+hums
+110
