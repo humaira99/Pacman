@@ -1,5 +1,7 @@
 package gameboard.scores;
 
+import gameboard.GameManager;
+
 import java.util.*;
 
 import static gameboard.GameManager.scboard;
@@ -11,7 +13,7 @@ public class CalculateScore {
     static int score1;
     static int score2;
     static int score3;
-    public static int total = -30;
+    public static int total = 0;
 
     public static HashMap<String, Integer> scboard2 = new HashMap<>();
     public static ArrayList<String> order = new ArrayList<>();
@@ -25,9 +27,21 @@ public class CalculateScore {
      */
 
     public static void calculateScore() {
-        score1 = scboard.get(0);
-        score2 = scboard.get(1) - score1 + 10;
-        score3 = scboard.get(2) - (score1 + score2) + 20;
+        if(GameManager.lifes == 3){
+            score1 = scboard.get(0);
+            score2 = 0;
+            score3 = 0;
+        }
+        else if(GameManager.lifes == 2){
+            score1 = scboard.get(0);
+            score2 = scboard.get(1) - score1;
+            score3 = 0;
+        }
+        else {
+            score1 = scboard.get(0);
+            score2 = scboard.get(1) - score1;
+            score3 = scboard.get(2) - (score1 + score2);
+        }
 
         scboard2.put("Round 1", score1);
         scboard2.put("Round 2", score2);

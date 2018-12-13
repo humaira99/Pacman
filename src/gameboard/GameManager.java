@@ -37,11 +37,12 @@ public class GameManager {
     private AnimationTimer upPacmanAnimation;
     private AnimationTimer downPacmanAnimation;
     private Maze maze;
-    private int lifes;
+    public static int lifes;
     private int score;
     private Score scoreBoard;
     private boolean gameEnded;
     private int cookiesEaten;
+    private int cherriesEaten;
     public static int level;
 
     public void setScore(int score) {
@@ -84,6 +85,14 @@ public class GameManager {
         return cookiesEaten;
     }
 
+    public void setCherriesEaten(int cherriesEaten) {
+        this.cherriesEaten = cherriesEaten;
+    }
+
+    public int getCherriesEaten() {
+        return cherriesEaten;
+    }
+
     public static ArrayList<Integer> scboard = new ArrayList<>();
 
     /**
@@ -122,7 +131,7 @@ public class GameManager {
         this.pacman.setCenterY(2.5 * BarObstacle.THICKNESS);
         lifes--;
         scboard.add(score);
-        score -= 10;
+       // score -= 10;
 
         //this.scoreBoard.lifes.setText("Lifes: " + this.lifes);
 
@@ -159,9 +168,12 @@ public class GameManager {
         }
         if(lifes == 1){
             scboard.add(score);
+
         }
+
         javafx.scene.text.Text endGame = new javafx.scene.text.Text("Game Over, press ESC to restart");
         ScoreFile scoreFile = new ScoreFile(this);
+
         if(level == 1){
             scoreFile.writeToFileEasy();
             scoreFile.readFromFileEasy();
@@ -175,8 +187,8 @@ public class GameManager {
             scoreFile.readFromFileHard();
         }
 
-        ShowScores showScores = new ShowScores();
-        showScores.ShowScores();
+        //ShowScores showScores = new ShowScores();
+        ShowScores.getInstance();
         endGame.setX(BarObstacle.THICKNESS * 3);
         endGame.setY(BarObstacle.THICKNESS * 28);
         endGame.setFont(Font.font("Arial", 40));
@@ -218,6 +230,7 @@ public class GameManager {
             CalculateScore.order.clear();
             CalculateScore.sc.clear();
             CalculateScore.sortedMap.clear();
+            CalculateScore.total = 0;
             ScoreFile.sortedMap.clear();
             ScoreFile.highscoreList.clear();
             ScoreFile.name.clear();
@@ -363,16 +376,16 @@ public class GameManager {
         Image ghost4 = new Image ("characters/images/ghost4.png");
         Image ghost5 = new Image ("characters/images/ghost5.png");
 
-        this.ghosts.add(new Ghost(18.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost1, maze, this));
-        this.ghosts.add(new Ghost(22.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost2, maze, this));
-        this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost3, maze, this));
+        //this.ghosts.add(new Ghost(18.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost1, maze, this));
+        //this.ghosts.add(new Ghost(22.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost2, maze, this));
+        //this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost3, maze, this));
 
         if(level == 2){
-            this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
+          // this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
         }
         if(level == 3){
-            this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
-            this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.0 * BarObstacle.THICKNESS, ghost5, maze, this));
+          //  this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
+          //  this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.0 * BarObstacle.THICKNESS, ghost5, maze, this));
 
         }
     }

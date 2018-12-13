@@ -11,6 +11,7 @@ import javafx.stage.Stage;
  */
 
 public class ShowScores {
+    public static ShowScores show;
     /**
      * Creates a score pop up after the game has ended to show scores from all 3 rounds, in descending order
      */
@@ -30,6 +31,15 @@ public class ShowScores {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static ShowScores getInstance(){
+        if(show == null){
+            show = new ShowScores();
+            show.ShowScores();
+        }
+        return show;
+
     }
 
 }

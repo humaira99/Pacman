@@ -48,8 +48,7 @@ public class Coalition {
         double pacmanTopEdge = pacmanCenterY - pacman.getRadius();
         double pacmanBottomEdge = pacmanCenterY + pacman.getRadius();
 
-
-        for (Cookie cookie:game.getCookieSet()) {
+        for (Cookie cookie: game.getCookieSet()) {
             double cookieCenterX = cookie.getCenterX();
             double cookieCenterY = cookie.getCenterY();
 
@@ -81,7 +80,7 @@ public class Coalition {
 
             }
             game.getScoreBoard().getScore().setText("Score: " + this.game.getScore());
-            if (game.getCookiesEaten() == cookieSet.size()) {
+            if (game.getCookiesEaten() == cookieSet.size() && game.getCherriesEaten() == game.getCherrySet().size()) {
                 this.game.endGame();
             }
         }
@@ -143,6 +142,10 @@ public class Coalition {
                     cherryEaten(cherry);
                 }
             }
+            game.getScoreBoard().getScore().setText("Score: " + this.game.getScore());
+            if (game.getCookiesEaten() == cookieSet.size() && game.getCherriesEaten() == game.getCherrySet().size()) {
+                this.game.endGame();
+            }
         }
     }
 
@@ -154,6 +157,7 @@ public class Coalition {
         if (cherry.isVisible()) {
             int score = game.getScore();
             game.setScore(score + cherry.getValue());
+            game.setCherriesEaten(game.getCherriesEaten() + 1);
 
         }
         cherry.hide();
