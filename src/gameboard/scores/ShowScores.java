@@ -12,6 +12,9 @@ import javafx.stage.Stage;
  */
 public class ShowScores {
 
+    /**
+     * Instance of scores pop up for the singleton design pattern
+     */
     public static ShowScores show;
     /**
      * Creates a score pop up after the game has ended to show scores from all 3 rounds, in descending order

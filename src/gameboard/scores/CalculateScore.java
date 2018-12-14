@@ -10,11 +10,26 @@ import static gameboard.GameManager.scboard;
  * Calculates the score to be displayed on the score pop up after the game has ended
  */
 public class CalculateScore {
+    /**
+     * total score
+     */
     public static int total = 0;
 
+    /**
+     * HashMap which stores the unordered map of rounds and their corresponding scores
+     */
     public static HashMap<String, Integer> scboard2 = new HashMap<>();
+    /**
+     * ArrayList which holds the string "Round ..." in order to be printed by the score board, from highest to lowest scoring
+     */
     public static ArrayList<String> order = new ArrayList<>();
+    /**
+     * ArrayList which holds the score from highest to lowest to be printed
+     */
     public static ArrayList<Integer> sc = new ArrayList<>();
+    /**
+     * Sorted Map of rounds and their scores in descending order
+     */
     public static Map<String, Integer> sortedMap = new LinkedHashMap<>();
 
     /**

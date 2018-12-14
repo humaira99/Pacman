@@ -15,12 +15,29 @@ import java.util.*;
 public class ScoreFile {
 
     public GameManager game;
+    /**
+     * HashMap of unsorted highscore list
+     */
     public static HashMap<String, Integer> highscoreList = new HashMap<>();
+    /**
+     * Map of sorted highscores
+     */
     public static Map<String, Integer> sortedMap = new LinkedHashMap<>();
+    /**
+     * List of the usernames in order
+     */
     public static ArrayList<String> name = new ArrayList<>();
+    /**
+     * List of the top scores in order
+     */
     public static ArrayList<Integer> score = new ArrayList<>();
+    /**
+     * Counter to ensure only 1 pop up is produced
+     */
     public static int write = 0;
-
+    /**
+     * Instance of the file for singleton design pattern
+     */
     private static ScoreFile scfile;
 
     /**

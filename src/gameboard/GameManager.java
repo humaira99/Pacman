@@ -38,12 +38,18 @@ public class GameManager {
     private AnimationTimer upPacmanAnimation;
     private AnimationTimer downPacmanAnimation;
     private Maze maze;
+    /**
+     * Number of lives player has remaining
+     */
     public static int lifes;
     private int score;
     private Score scoreBoard;
     private boolean gameEnded;
     private int cookiesEaten;
     private int cherriesEaten;
+    /**
+     * Level chosen by player
+     */
     public static int level;
 
     void setScore(int score) {
@@ -94,10 +100,14 @@ public class GameManager {
         return cherriesEaten;
     }
 
+    /**
+     * ArrayList that holds scores after each round
+     */
     public static ArrayList<Integer> scboard = new ArrayList<>();
 
     /**
      * Constructor
+     * @param root Root of the game
      */
     public GameManager(Group root) {
         this.root = root;

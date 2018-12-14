@@ -11,6 +11,9 @@ import javafx.stage.Stage;
  */
 public class winController {
 
+    /**
+     * Instance of the win screen needed for singleton design pattern
+     */
     public static winController win;
 
     /**

@@ -6,8 +6,14 @@ import javafx.scene.paint.Color;
  * Gets setup colours from the colour pickers on the set up screen and sets them to variables to be used by different methods to set the colours
  */
 public class ColourSet {
+    /**
+     * Colour of the cookie set to be accessed by <Code>Cookie</Code> to set the colour
+     */
     public static Color cookie;
     static Color wall;
+    /**
+     * Colour of the background set to be accessed by another class to set the colour of the background
+     */
     public static Color background;
 
     /**

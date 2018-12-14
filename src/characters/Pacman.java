@@ -21,6 +21,9 @@ public class Pacman extends Circle {
 
     private GameManager game;
     private Maze maze;
+    /**
+     * Pacman instance so it can be accessed by <code>getinstance()</code> to implement the singleton pattern
+     */
     public static Pacman pacman;
 
     /**
