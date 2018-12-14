@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Best Pacman Ever
 ## G52SWM CW2
 ### Humaira Ahmed 4300559
@@ -22,7 +23,3 @@ The game adopts an easy to use user-interface, which uses the pacman colours - r
 7. When the game is over, a score board pops up showing you your score for each round, highest at the top and the total points scored
 8. By pressing the 'view highscore' button, another board will pop up showing the top 10 high scores of all time 
 9. The game can be restarted by pressing the `esc` key on the keyboard 
-
-
-
-
