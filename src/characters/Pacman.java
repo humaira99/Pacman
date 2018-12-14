@@ -22,7 +22,7 @@ public class Pacman extends Circle {
 
     private GameManager game;
     private Maze maze;
-    private static Pacman pacman;
+    public static Pacman pacman;
 
     /**
      *

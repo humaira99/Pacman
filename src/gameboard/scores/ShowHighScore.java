@@ -15,7 +15,7 @@ public class ShowHighScore {
      * Creates a new window pop up which shows the highscores when the 'view highscore' list button is pressed
      *
      */
-    public void ShowHighScore() {
+    public void showHighScore() {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/highscore.fxml"));

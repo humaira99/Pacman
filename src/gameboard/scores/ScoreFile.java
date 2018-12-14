@@ -18,7 +18,7 @@ public class ScoreFile {
     public static Map<String, Integer> sortedMap = new LinkedHashMap<>();
     public static ArrayList<String> name = new ArrayList<>();
     public static ArrayList<Integer> score = new ArrayList<>();
-    public int write = 0;
+    public static int write = 0;
 
     public static ScoreFile scfile;
     /**

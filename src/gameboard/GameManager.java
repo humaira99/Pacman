@@ -162,17 +162,13 @@ public class GameManager {
             scboard.add(score);
             scboard.add(0);
             scboard.add(0);
-            winController.getInstance();
         }
         if(lifes == 2){
             scboard.add(score);
             scboard.add(0);
-            winController.getInstance();
         }
         if(lifes == 1){
             scboard.add(score);
-            winController.getInstance();
-
         }
 
         javafx.scene.text.Text endGame = new javafx.scene.text.Text("Game Over, press ESC to restart");
@@ -191,8 +187,10 @@ public class GameManager {
             scoreFile.readFromFileHard();
         }
 
-        //ShowScores showScores = new ShowScores();
         ShowScores.getInstance();
+        if(lifes >= 1) {
+            winController.getInstance();
+        }
         endGame.setX(BarObstacle.THICKNESS * 3);
         endGame.setY(BarObstacle.THICKNESS * 28);
         endGame.setFont(Font.font("Arial", 40));
@@ -223,11 +221,16 @@ public class GameManager {
                 this.drawBoardHard();
             }
 
+            ShowScores.show = null;
+            ScoreFile.write = 0;
+            winController.win = null;
+            Pacman.pacman = null;
             this.pacman.setCenterX(2.5 * BarObstacle.THICKNESS);
             this.pacman.setCenterY(2.5 * BarObstacle.THICKNESS);
             lifes = 3;
             this.score = 0;
             this.cookiesEaten = 0;
+            this.cherriesEaten = 0;
 
             scboard.clear();
             CalculateScore.scboard2.clear();

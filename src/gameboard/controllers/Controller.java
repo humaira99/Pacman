@@ -67,7 +67,7 @@ public class Controller {
     public void showHighscore(javafx.event.ActionEvent actionEvent) {
 
         ShowHighScore show = new ShowHighScore();
-        show.ShowHighScore();
+        show.showHighScore();
 
     }
 

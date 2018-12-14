@@ -56,4 +56,8 @@ trying
 665
 ffs
 755
+pacman4life
+790
+ghost
+790
 
