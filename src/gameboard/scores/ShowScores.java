@@ -19,7 +19,7 @@ public class ShowScores {
     private void showScores() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/score.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
+            Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Score");
             Scene theScene = new Scene(root);

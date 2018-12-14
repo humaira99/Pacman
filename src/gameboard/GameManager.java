@@ -252,7 +252,7 @@ public class GameManager {
      * @param skip Array of integers where the cookies should not be drawn due to obstacles
      * Refactored from drawBoard method to eliminate repeating code
      */
-    public void drawRow(Integer skip[], int row){
+    private void drawRow(Integer skip[], int row){
         for (int i = 0; i < 23; i++) {
             if (!Arrays.asList(skip).contains(i)) {
                 Cookie cookie = new Cookie(((2*i) + 2.5) * BarObstacle.THICKNESS, (2.5 + 2 * row) * BarObstacle.THICKNESS);
@@ -267,7 +267,7 @@ public class GameManager {
      * @param row Each row of the gameboard which needs drawing
      * @param skip Array of integers where the cherries should be drawn
      */
-    public void drawRowCherry(Integer skip[], int row){
+    private void drawRowCherry(Integer skip[], int row){
         for (int i = 0; i < 23; i++) {
             if (Arrays.asList(skip).contains(i)) {
                 Cherry cherry = new Cherry(((2*i) + 2.5) * BarObstacle.THICKNESS, (2.5 + 2 * row) * BarObstacle.THICKNESS);

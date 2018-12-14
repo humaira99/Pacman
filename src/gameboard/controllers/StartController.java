@@ -35,7 +35,7 @@ public class StartController {
         if(isInputValid() == Boolean.TRUE) {
             try {
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/setup.fxml"));
-                Parent root = (Parent) fxmlLoader.load();
+                Parent root = fxmlLoader.load();
                 content.getChildren().setAll(root);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -50,7 +50,7 @@ public class StartController {
      * @return <code>true</code> if valid; <code>false</code> if invalid
      */
     @FXML
-    public Boolean isInputValid() {
+    private Boolean isInputValid() {
         if (username.getText() == null || username.getText().length() == 0) {
             validate.setText("Please enter a username");
             username.setStyle("-fx-border-color: red; -fx-border-width: 3");

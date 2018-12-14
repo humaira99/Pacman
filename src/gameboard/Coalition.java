@@ -91,7 +91,7 @@ public class Coalition {
      * Refactored from checkCookieCoalition class so code is not repeated
      * @param cookie gets the specific cookie the pacman touches
      */
-    public void cookieEaten(Cookie cookie){
+    private void cookieEaten(Cookie cookie){
         if (cookie.isVisible()) {
             int score = game.getScore();
             game.setScore(score + cookie.getValue());
@@ -153,7 +153,7 @@ public class Coalition {
      * Hides the cherry when pacman touches it and increases score
      * @param cherry gets the specific cookie the pacman touches
      */
-    public void cherryEaten(Cherry cherry){
+    private void cherryEaten(Cherry cherry){
         if (cherry.isVisible()) {
             int score = game.getScore();
             game.setScore(score + cherry.getValue());

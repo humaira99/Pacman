@@ -179,7 +179,7 @@ public class ScoreFile {
      * Sorts through the hashmap and orders the scores to find the top 10 scores and their usernames
      * Adds top 10 in to another list to be printed by the highscore pop up screen
      */
-    public void sortList(){
+    private void sortList(){
         List<Map.Entry<String, Integer>> list = new LinkedList<>(highscoreList.entrySet());
         Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
             public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {

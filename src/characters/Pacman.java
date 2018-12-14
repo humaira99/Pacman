@@ -30,7 +30,7 @@ public class Pacman extends Circle {
      * @param y y-coordinate of pacman on the board
      *
      */
-    public Pacman(GameManager game, double x, double y) {
+    private Pacman(GameManager game, double x, double y) {
         this.setCenterX(x);
         this.setCenterY(y);
         this.setRadius(25);

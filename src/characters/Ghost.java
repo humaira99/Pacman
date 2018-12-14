@@ -63,15 +63,6 @@ public class Ghost extends Rectangle implements Runnable {
     }
 
     /**
-     * Gets a random boolean
-     * @return Random boolean
-     */
-    private boolean getRandomBoolean() {
-        Random rand = new Random();
-        return rand.nextBoolean();
-    }
-
-    /**
      * Gets the animation for the ghost
      * @return animation
      */
@@ -202,7 +193,7 @@ public class Ghost extends Rectangle implements Runnable {
     /**
      * Creates an animation of the ghost
      */
-    public void createAnimation() {
+    private void createAnimation() {
 
         this.animation = new AnimationTimer()
         {

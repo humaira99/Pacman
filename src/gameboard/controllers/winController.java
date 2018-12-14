@@ -19,7 +19,7 @@ public class winController {
     private void wincontroller() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/win.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
+            Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("You Win");
             Scene theScene = new Scene(root);

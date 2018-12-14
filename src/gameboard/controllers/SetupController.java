@@ -23,7 +23,7 @@ public class SetupController {
     public void setBackPressed(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/screens/start.fxml"));
-            Parent root1 = (Parent) fxmlLoader1.load();
+            Parent root1 = fxmlLoader1.load();
             contentset.getChildren().setAll(root1);
         } catch (Exception e) {
             e.printStackTrace();
@@ -39,7 +39,7 @@ public class SetupController {
     public void setStartPressed(javafx.event.ActionEvent actionEvent) {
         try {
             FXMLLoader fxmlLoader1 = new FXMLLoader(getClass().getResource("/screens/level.fxml"));
-            Parent root = (Parent) fxmlLoader1.load();
+            Parent root = fxmlLoader1.load();
             contentset.getChildren().setAll(root);
         } catch (Exception e) {
             e.printStackTrace();

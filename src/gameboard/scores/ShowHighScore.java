@@ -18,7 +18,7 @@ public class ShowHighScore {
 
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/highscore.fxml"));
-            Parent root = (Parent) fxmlLoader.load();
+            Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setTitle("Highscores");
             Scene theScene = new Scene(root);
