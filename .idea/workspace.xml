@@ -1,32 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="278d63a4-57c9-4544-9829-25950f829d21" name="Default Changelist" comment="clean up code and java docs for characte">
+    <list default="true" id="278d63a4-57c9-4544-9829-25950f829d21" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Cherry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Cherry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Cookie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Cookie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Ghost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Ghost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/characters/Pacman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/characters/Pacman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/BarObstacle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/BarObstacle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/Coalition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/Coalition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/ColourSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/ColourSet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/Score.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/controllers/ScoresController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/controllers/LevelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/controllers/LevelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/controllers/SetupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/controllers/SetupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/controllers/StartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/controllers/StartController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/controllers/winController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/controllers/winController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/scores/CalculateScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/scores/CalculateScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/scores/ScoreFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/scores/ScoreFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/scores/ShowHighScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/scores/ShowHighScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gameboard/scores/ShowScores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/scores/ShowScores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gameboard/scores/highscoreHard.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/gameboard/scores/highscoreHard.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/highscore.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/highscore.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/score.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/score.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/win.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/win.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +34,8 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="6" />
-          <entry key="fxml" value="63" />
-          <entry key="java" value="437" />
+          <entry key="fxml" value="64" />
+          <entry key="java" value="443" />
           <entry key="png" value="5" />
           <entry key="txt" value="35" />
           <entry key="xml" value="2" />
@@ -68,9 +45,9 @@
         <counts>
           <entry key="CSS" value="6" />
           <entry key="Image" value="5" />
-          <entry key="JAVA" value="437" />
+          <entry key="JAVA" value="443" />
           <entry key="PLAIN_TEXT" value="35" />
-          <entry key="XML" value="65" />
+          <entry key="XML" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -79,14 +56,14 @@
           <entry key="dummy" value="18" />
           <entry key="fxml" value="905" />
           <entry key="java" value="25296" />
-          <entry key="txt" value="2500" />
+          <entry key="txt" value="2537" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="325" />
           <entry key="JAVA" value="25296" />
-          <entry key="PLAIN_TEXT" value="2518" />
+          <entry key="PLAIN_TEXT" value="2555" />
           <entry key="XML" value="905" />
         </counts>
       </usages-collector>
@@ -102,14 +79,67 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/gameboard/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/GameManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5850">
+              <caret line="433" column="23" lean-forward="true" selection-start-line="433" selection-start-column="23" selection-end-line="433" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/screens/highscore.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="253" selection-start-line="7" selection-start-column="253" selection-end-line="7" selection-end-column="253" />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/Score.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/Maze.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3015">
+              <caret line="206" column="34" selection-start-line="206" selection-start-column="34" selection-end-line="206" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/BarObstacle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/controllers/StartController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="26" column="27" lean-forward="true" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="27" />
+              <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/gameboard/controllers/LevelController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1066#1067#0" expanded="true" />
-                <element signature="e#1094#1095#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,14 +263,13 @@
               <item name="BestPacmanEverV5" type="b2602c69:ProjectViewProjectNode" />
               <item name="BestPacmanEverV5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="gameboard" type="462c0819:PsiDirectoryNode" />
+              <item name="characters" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BestPacmanEverV5" type="b2602c69:ProjectViewProjectNode" />
               <item name="BestPacmanEverV5" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gameboard" type="462c0819:PsiDirectoryNode" />
-              <item name="scores" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -252,7 +281,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544750202823" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544751845782" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -338,20 +367,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543871732046</updated>
-    </task>
-    <task id="LOCAL-00005" summary="hide setup window when pacman starts">
-      <created>1543968094569</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1543968094569</updated>
-    </task>
-    <task id="LOCAL-00006" summary="colour picker functionality">
-      <created>1543974512739</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1543974512739</updated>
     </task>
     <task id="LOCAL-00007" summary="set default colours">
       <created>1543975536205</created>
@@ -682,7 +697,21 @@
       <option name="project" value="LOCAL" />
       <updated>1544746753239</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="code clean up and updated javadocs">
+      <created>1544750220062</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1544750220062</updated>
+    </task>
+    <task id="LOCAL-00055" summary="code clean up and updated javadocs">
+      <created>1544750371940</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1544750371940</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -810,7 +839,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="refactor controller to SetupController" />
     <MESSAGE value="organised packages" />
     <MESSAGE value="organised packages and bug fixes" />
     <MESSAGE value="javadocs calculatescore" />
@@ -835,7 +863,8 @@
     <MESSAGE value="level images on setup screen" />
     <MESSAGE value="singleton pattern on showscores, scorefile&#10;Added a win screen" />
     <MESSAGE value="bug fixes with restarting game" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug fixes with restarting game" />
+    <MESSAGE value="code clean up and updated javadocs" />
+    <option name="LAST_COMMIT_MESSAGE" value="code clean up and updated javadocs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand>
@@ -1124,14 +1153,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/screens/highscore.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="7" column="253" selection-start-line="7" selection-start-column="253" selection-end-line="7" selection-end-column="253" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/screens/score.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1150,13 +1171,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/controllers/StartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/controllers/winController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -1171,16 +1185,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="562">
           <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/controllers/LevelController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="67" column="9" lean-forward="true" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1218,13 +1222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/BarObstacle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/Coalition.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1239,27 +1236,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5790">
-          <caret line="429" column="21" selection-start-line="429" selection-start-column="21" selection-end-line="429" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/Maze.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2929">
-          <caret line="206" column="34" selection-start-line="206" selection-start-column="34" selection-end-line="206" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gameboard/Score.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="29" column="52" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/gameboard/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1269,6 +1245,59 @@
             <element signature="e#1066#1067#0" expanded="true" />
             <element signature="e#1094#1095#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/Score.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="38" column="43" lean-forward="true" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/Maze.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3015">
+          <caret line="206" column="34" selection-start-line="206" selection-start-column="34" selection-end-line="206" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/BarObstacle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/controllers/StartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="32" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/controllers/LevelController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="95" column="21" lean-forward="true" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/screens/highscore.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="253" selection-start-line="7" selection-start-column="253" selection-end-line="7" selection-end-column="253" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gameboard/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5850">
+          <caret line="433" column="23" lean-forward="true" selection-start-line="433" selection-start-column="23" selection-end-line="433" selection-end-column="23" />
         </state>
       </provider>
     </entry>
