@@ -1,5 +1,5 @@
 <p align="right">
-<img src="https://lh3.googleusercontent.com/O2_cG77yqFdq_eLvRkOVrP_htI02KQwjE8t61Y-YNsb-rRySpEF0d-3MOZb6SOrYqCyI" alt="" width=140 height=70>
+<img src="https://lh3.googleusercontent.com/O2_cG77yqFdq_eLvRkOVrP_htI02KQwjE8t61Y-YNsb-rRySpEF0d-3MOZb6SOrYqCyI" alt="" width=250 height=150>
 </p>
 
 # Best Pacman Ever
