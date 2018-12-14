@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Best Pacman Ever
 ## G52SWM CW2
 ### Humaira Ahmed 4300559
@@ -16,7 +16,7 @@ The game adopts an easy to use user-interface, which uses the pacman colours - r
     - Hard: hard gameboard with _five_ ghosts 
 4. Press START under the chosen level to play
 5. Move the Pacman using the arrow keys (`up`, `down`, `left`, `right`)
-6. Try and score as many points as possible, without being caught by a ghost
+6. Try and score as many points as possible, without being caught by a ghost :ghost:
     - You have 3 lives, touching a ghost makes you lose a life. A life counter is kept at the bottom of the game board 
     - Cookies :black_circle: : worth 5 points
     - Cherries :cherries: :  worth 20 points 
