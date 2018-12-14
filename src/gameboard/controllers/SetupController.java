@@ -32,38 +32,9 @@ public class SetupController {
     }
 
     /**
-     * When start is pressed on the setup window - the game will start
-     * @param actionEvent When the start button is pressed on the setup window
+     * When next button is pressed, goes to next screen which is levels
+     * @param actionEvent Button press
      */
-   /* @FXML
-    public void setStartPressed(javafx.event.ActionEvent actionEvent) {
-
-        Stage stage = new Stage();
-        stage.setTitle("Pacman");
-
-        Group root = new Group();
-        Scene theScene = new Scene( root );
-        stage.setScene(theScene);
-
-        Canvas canvas = new Canvas( 1225, 600 );
-        root.getChildren().add( canvas );
-        if(ColourSet.background != null) {
-            GraphicsContext gc = canvas.getGraphicsContext2D();
-            gc.setFill(ColourSet.background);
-            gc.fillRect(0, 0, canvas.getWidth(), canvas.getHeight());
-        }
-        GameManager gameManager = new GameManager(root);
-
-        gameManager.drawBoardEasy();
-
-        theScene.addEventHandler(KeyEvent.KEY_PRESSED, event -> gameManager.movePacman(event));
-        theScene.addEventHandler(KeyEvent.KEY_RELEASED, event -> gameManager.stopPacman(event));
-        theScene.addEventHandler(KeyEvent.KEY_PRESSED, event -> gameManager.restartGame(event));
-
-        stage.show();
-        contentset.getScene().getWindow().hide();
-    }*/
-
     @FXML
     public void setStartPressed(javafx.event.ActionEvent actionEvent) {
         try {

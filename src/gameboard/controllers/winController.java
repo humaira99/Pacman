@@ -5,11 +5,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * Controller for win pop up
+ * Implements singleton design pattern so only 1 screen is shown per game
+ */
 public class winController {
 
     public static winController win;
 
-    public void winController() {
+    /**
+     * Creates a new pop up screen if the player wins which is an image saying "you win"
+     */
+    private void wincontroller() {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/screens/win.fxml"));
             Parent root = (Parent) fxmlLoader.load();
@@ -25,10 +32,15 @@ public class winController {
         }
     }
 
+    /**
+     * Singleton design patern
+     * If a pop up has already been shown - does not make a new one in case program loops
+     * @return single instance win pop up
+     */
     public static winController getInstance(){
         if(win == null){
             win = new winController();
-            win.winController();
+            win.wincontroller();
         }
         return win;
     }

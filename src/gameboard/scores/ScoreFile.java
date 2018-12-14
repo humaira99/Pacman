@@ -10,6 +10,7 @@ import java.util.*;
 
 /**
  * Writes username and score to a file and reads from that file to generate the highscore list
+ * 3 different files - one for each level
  */
 public class ScoreFile {
 
@@ -20,13 +21,13 @@ public class ScoreFile {
     public static ArrayList<Integer> score = new ArrayList<>();
     public static int write = 0;
 
-    public static ScoreFile scfile;
+    private static ScoreFile scfile;
+
     /**
      * Constructor
-     *
      * @param game The game instance
      */
-    public ScoreFile(GameManager game) {
+    private ScoreFile(GameManager game) {
         this.game = game;
     }
 
@@ -105,9 +106,8 @@ public class ScoreFile {
     }
 
     /**
-     * Reads the username and score from the file and adds the values to HashMap
-     * Sorts through the hashmap and orders the scores to find the top 10 scores and their usernames
-     * Adds top 10 in to another list to be printed by the highscore pop up screen
+     * Reads the username and score from the file and adds the values to HashMap, for the easy level
+     * Calls <code>sortlist()</code> to sort the list in order to print highscores for the pop up
      */
     public void readFromFileEasy() {
 
@@ -130,9 +130,8 @@ public class ScoreFile {
     }
 
     /**
-     * Reads the username and score from the file and adds the values to HashMap
-     * Sorts through the hashmap and orders the scores to find the top 10 scores and their usernames
-     * Adds top 10 in to another list to be printed by the highscore pop up screen
+     * Reads the username and score from the file and adds the values to HashMap, for the intermediate level
+     * Calls <code>sortlist()</code> to sort the list in order to print highscores for the pop up
      */
     public void readFromFileInt() {
         try {
@@ -153,9 +152,8 @@ public class ScoreFile {
     }
 
     /**
-     * Reads the username and score from the file and adds the values to HashMap
-     * Sorts through the hashmap and orders the scores to find the top 10 scores and their usernames
-     * Adds top 10 in to another list to be printed by the highscore pop up screen
+     * Reads the username and score from the file and adds the values to HashMap, for the hard level
+     * Calls <code>sortlist()</code> to sort the list in order to print highscores for the pop up
      */
     public void readFromFileHard() {
         try {
@@ -176,6 +174,11 @@ public class ScoreFile {
 
     }
 
+    /**
+     * Method to sort the list
+     * Sorts through the hashmap and orders the scores to find the top 10 scores and their usernames
+     * Adds top 10 in to another list to be printed by the highscore pop up screen
+     */
     public void sortList(){
         List<Map.Entry<String, Integer>> list = new LinkedList<>(highscoreList.entrySet());
         Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {

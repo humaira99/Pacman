@@ -11,7 +11,7 @@ import javafx.scene.control.Label;
  * Sets score pop up screen labels
  * Sets highscore pop up screen labels
  */
-public class Controller {
+public class ScoresController {
 
     @FXML
     Label topRound;

@@ -4,14 +4,17 @@ import javafx.scene.image.Image;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 
+/**
+ * Generates a cherry that Pacman eats to increase the score by value variable
+ */
 public class Cherry extends Circle {
 
     private int value;
 
     /**
-     * Creates a cookie object, sets the value (number of points scores when pacman eats it) and colour
-     * @param x x-coordinate of where the cookie will be
-     * @param y y-coordinate of where the cookie will be
+     * Creates a cherry object, sets the value (number of points scores when pacman eats it) and image icon
+     * @param x x-coordinate of where the cherry will be
+     * @param y y-coordinate of where the cherry will be
      */
     public Cherry(double x, double y) {
         this.value = 20;

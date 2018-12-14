@@ -14,20 +14,20 @@ import javafx.scene.text.Text;
 public class Score {
 
     /**
-     * gets the score
-     * @return current score
+     * Gets the score
+     * @return Current score
      */
     public Text getScore() {
         return score;
     }
 
     public Text score;
-    public Text lifes;
-    public ImageView imageView, imageView2, imageView3;
+    Text lifes;
+    ImageView imageView, imageView2, imageView3;
 
     /**
      * Displays the players score
-     * Displays the number of lives
+     * Displays the number of lives as pacman images
      * @param root Group where the score and lives labels are added
      */
     Score(Group root) {

@@ -1,6 +1,6 @@
 package gameboard.scores;
 
-import gameboard.controllers.Controller;
+import gameboard.controllers.ScoresController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,7 +13,6 @@ public class ShowHighScore {
 
     /**
      * Creates a new window pop up which shows the highscores when the 'view highscore' list button is pressed
-     *
      */
     public void showHighScore() {
 
@@ -25,7 +24,7 @@ public class ShowHighScore {
             Scene theScene = new Scene(root);
             theScene.getStylesheets().add(getClass().getResource("/gameboard/style.css").toExternalForm());
             stage.setScene(theScene);
-            Controller controller = fxmlLoader.getController();
+            ScoresController controller = fxmlLoader.getController();
             controller.high();
             stage.show();
         } catch (Exception e) {

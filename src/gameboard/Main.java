@@ -12,12 +12,12 @@ import javafx.stage.Stage;
  * Starts the game
  */
 public class Main extends Application {
+
     /**
-     * Creates the window which shows the game where the user can play pacman
-     * @param theStage The window where the game will be displayed
+     * Creates the window which shows the first screen of the game which is the start page, where player has to enter username
+     * @param theStage The window where the screen will be displayed
      * @throws Exception FXMLLoader throws an exception
      */
-
     @Override
     public void start(Stage theStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("../screens/start.fxml"));

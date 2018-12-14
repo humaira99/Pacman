@@ -46,7 +46,7 @@ public class GameManager {
     private int cherriesEaten;
     public static int level;
 
-    public void setScore(int score) {
+    void setScore(int score) {
         this.score = score;
     }
 
@@ -54,7 +54,7 @@ public class GameManager {
         return maze;
     }
 
-    public void setCookiesEaten(int cookiesEaten) {
+    void setCookiesEaten(int cookiesEaten) {
         this.cookiesEaten = cookiesEaten;
     }
 
@@ -66,7 +66,7 @@ public class GameManager {
         return cookieSet;
     }
 
-    public Set<Cherry> getCherrySet() {
+    Set<Cherry> getCherrySet() {
         return cherrySet;
     }
 
@@ -78,19 +78,19 @@ public class GameManager {
         return score;
     }
 
-    public Score getScoreBoard() {
+    Score getScoreBoard() {
         return scoreBoard;
     }
 
-    public int getCookiesEaten() {
+    int getCookiesEaten() {
         return cookiesEaten;
     }
 
-    public void setCherriesEaten(int cherriesEaten) {
+    void setCherriesEaten(int cherriesEaten) {
         this.cherriesEaten = cherriesEaten;
     }
 
-    public int getCherriesEaten() {
+    int getCherriesEaten() {
         return cherriesEaten;
     }
 
@@ -110,11 +110,9 @@ public class GameManager {
         this.rightPacmanAnimation = pacman.createAnimation("right");
         this.upPacmanAnimation = pacman.createAnimation("up");
         this.downPacmanAnimation = pacman.createAnimation("down");
-        this.lifes = 3;
+        lifes = 3;
         this.score = 0;
         this.cookiesEaten = 0;
-        this.level = level;
-
     }
 
     /**
@@ -132,9 +130,6 @@ public class GameManager {
         this.pacman.setCenterY(2.5 * BarObstacle.THICKNESS);
         lifes--;
         scboard.add(score);
-       // score -= 10;
-
-        //this.scoreBoard.lifes.setText("Lifes: " + this.lifes);
 
         if (lifes == 2) {
             this.scoreBoard.imageView3.setOpacity(0);
@@ -151,6 +146,9 @@ public class GameManager {
 
     /**
      * Ends the game
+     * If lives are left: you win screen pops up
+     * Writes and reads from different text files based on level
+     * Prints out score board
      */
     void endGame() {
         this.gameEnded = true;
@@ -203,6 +201,7 @@ public class GameManager {
 
     /**
      * Restart the game
+     * Sets all counters/variables/lists to null
      * @param event - if player presses esc on the keyboard, the game should restart
      */
     public void restartGame(KeyEvent event) {
@@ -249,8 +248,8 @@ public class GameManager {
 
     /**
      * Draws one row of the game board
-     * @param row each row of the gameboard which needs drawing
-     * @param skip array of integers where the cookies should not be drawn due to maze/islands
+     * @param row Each row of the gameboard which needs drawing
+     * @param skip Array of integers where the cookies should not be drawn due to obstacles
      * Refactored from drawBoard method to eliminate repeating code
      */
     public void drawRow(Integer skip[], int row){
@@ -263,6 +262,11 @@ public class GameManager {
         }
     }
 
+    /**
+     * Draws one row of the game board
+     * @param row Each row of the gameboard which needs drawing
+     * @param skip Array of integers where the cherries should be drawn
+     */
     public void drawRowCherry(Integer skip[], int row){
         for (int i = 0; i < 23; i++) {
             if (Arrays.asList(skip).contains(i)) {
@@ -274,7 +278,7 @@ public class GameManager {
     }
 
     /**
-     * Draws the board of the game with the cookies and the Pacman
+     * Draws the board of the game with the cookies, cherries and the Pacman for the easy level
      */
     public void drawBoardEasy() {
 
@@ -306,7 +310,7 @@ public class GameManager {
     }
 
     /**
-     * Draws the board of the game with the cookies and the Pacman
+     * Draws the board of the game with the cookies, cherries and the Pacman for the intermediate level
      */
     public void drawBoardIntermediate() {
 
@@ -337,7 +341,7 @@ public class GameManager {
     }
 
     /**
-     * Draws the board of the game with the cookies and the Pacman
+     * Draws the board of the game with the cookies, cherries and the Pacman for the hard level
      */
     public void drawBoardHard() {
 
@@ -373,8 +377,9 @@ public class GameManager {
 
     /**
      * Generates the ghosts for the pacman!
+     * Generates 3 ghosts for easy level, 4 for intermediate and 5 for hard
      */
-    public void generateGhosts() {
+    private void generateGhosts() {
 
 
         Image ghost1 = new Image ("characters/images/ghost1.png");
@@ -383,23 +388,22 @@ public class GameManager {
         Image ghost4 = new Image ("characters/images/ghost4.png");
         Image ghost5 = new Image ("characters/images/ghost5.png");
 
-        //this.ghosts.add(new Ghost(18.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost1, maze, this));
-       // this.ghosts.add(new Ghost(22.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost2, maze, this));
-       // this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost3, maze, this));
+        this.ghosts.add(new Ghost(18.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost1, maze, this));
+        this.ghosts.add(new Ghost(22.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost2, maze, this));
+        this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.5 * BarObstacle.THICKNESS, ghost3, maze, this));
 
         if(level == 2){
-          // this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
+           this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
         }
         if(level == 3){
-           // this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
-           // this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.0 * BarObstacle.THICKNESS, ghost5, maze, this));
-
+            this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 9.5 * BarObstacle.THICKNESS, ghost4, maze, this));
+            this.ghosts.add(new Ghost(28.5 * BarObstacle.THICKNESS, 12.0 * BarObstacle.THICKNESS, ghost5, maze, this));
         }
     }
 
     /**
      * Moves the pacman
-     * @param event moves in the direction of the arrow key pressed (up/down/left/right)
+     * @param event Moves in the direction of the arrow key pressed (up/down/left/right)
      */
     public void movePacman(KeyEvent event) {
         for (Ghost ghost : this.ghosts) {
@@ -423,7 +427,7 @@ public class GameManager {
 
     /**
      * Stops the pacman
-     * @param event when an arrow key is pressed
+     * @param event When an arrow key is pressed
      */
     public void stopPacman(KeyEvent event) {
         switch(event.getCode()) {

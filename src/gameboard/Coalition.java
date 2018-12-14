@@ -8,14 +8,14 @@ import characters.Pacman;
 import java.util.Set;
 
 /**
- * Checks if Pacman is touching a cookie or a ghost
+ * Checks if Pacman is touching a cookie, cherry or a ghost
  */
 public class Coalition {
 
-    GameManager game;
-    Pacman pacman;
-    Set<Cookie> cookieSet;
-    Set<Ghost> ghosts;
+    private GameManager game;
+    private Pacman pacman;
+    private Set<Cookie> cookieSet;
+    private Set<Ghost> ghosts;
 
     /**
      * Constructor

@@ -10,9 +10,6 @@ import static gameboard.GameManager.scboard;
  * Calculates the score to be displayed on the score pop up after the game has ended
  */
 public class CalculateScore {
-    static int score1;
-    static int score2;
-    static int score3;
     public static int total = 0;
 
     public static HashMap<String, Integer> scboard2 = new HashMap<>();
@@ -23,10 +20,11 @@ public class CalculateScore {
     /**
      * Calculates scores for each round
      * Sorts through the hashmap in order to display score and round number from highest to lowest in the score pop up
-     *
      */
-
     public static void calculateScore() {
+        int score2;
+        int score3;
+        int score1;
         if(GameManager.lifes == 3){
             score1 = scboard.get(0);
             score2 = 0;

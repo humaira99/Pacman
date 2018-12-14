@@ -16,7 +16,6 @@ import javafx.scene.shape.Circle;
  * Eats cookies to collect points
  *
  * Implements singleton design pattern so only one pacman is ever made per game
- *
  */
 public class Pacman extends Circle {
 
@@ -25,7 +24,6 @@ public class Pacman extends Circle {
     public static Pacman pacman;
 
     /**
-     *
      * Loads an image of pacman as the icon
      * @param game GameManager instance
      * @param x x-coordinate of pacman on the board
@@ -42,7 +40,6 @@ public class Pacman extends Circle {
     }
 
     /**
-     *
      * Creates a single instance of pacman (singleton pattern) If there is no pacman made already: creates one. If there is - returns existing pacman
      * @param game GameManager instance
      * @param x x-coordinate of pacman

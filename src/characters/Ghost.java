@@ -15,9 +15,7 @@ import java.util.Random;
 /**
  * Creates a Ghost character which moves around the maze to catch pacman
  * Implements runnable interface for animation
- *
  */
-
 public class Ghost extends Rectangle implements Runnable {
 
     private String direction;
@@ -27,14 +25,12 @@ public class Ghost extends Rectangle implements Runnable {
     private int timesWalked;
 
     /**
-     *
      * Loads an image of ghost as the icon
      * @param x x-coordinate of ghost on the board
      * @param y y-coordinate of ghost on the board
      * @param img Ghost image for icon
      * @param maze Game maze instance
      * @param gameManager Game instance
-     *
      */
     public Ghost(double x, double y, Image img, Maze maze, GameManager gameManager) {
         this.getX();
@@ -52,7 +48,6 @@ public class Ghost extends Rectangle implements Runnable {
     }
 
     /**
-     *
      * Gets a random direction which the ghost should start moving in
      * @param exclude1 Doesn't allow the ghost to move in this direction
      * @param exclude2 Doesn't allow the ghost to move in this direction

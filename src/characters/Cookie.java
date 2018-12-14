@@ -44,11 +44,4 @@ public class Cookie extends Circle {
         this.setVisible(false);
     }
 
-    /**
-     * Shows the cookie again
-     */
-    public void show() {
-        this.setVisible(true);
-    }
-
 }
