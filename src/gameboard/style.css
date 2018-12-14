@@ -6,19 +6,9 @@
     -fx-background: #000000;
 }
 
-#backColourPicker{
-    -fx-background: #FDFDFD;
-    -fx-base: #FDFDFD;
-}
-
-#wallColourPicker{
-    -fx-background: #5f9ea0;
-    -fx-base: #5f9ea0;
-}
-
-#cookieColourPicker{
-    -fx-background: #8b4513;
-    -fx-base: #8b4513;
+#backColourPicker, #wallColourPicker, #cookieColourPicker{
+    -fx-background: white;
+    -fx-base: white;
 }
 
 #setStart, #startButton, #easy, #middle, #hard{
