@@ -3,11 +3,8 @@
 </p>
 
 # Best Pacman Ever
-## G52SWM CW2
-### Humaira Ahmed 4300559
+### Humaira Ahmed
 
-This is the git repository for CW2 of the Software Maintenance Module. 
-The code has been refactored, suitable design patterns have been implemented, and additions have been made to make the code more maintanable and the to make the game better.
 The game adopts an easy to use user-interface, which uses the pacman colours - red, yellow and black. 
 
 **HOW TO PLAY:**
@@ -28,3 +25,6 @@ The game adopts an easy to use user-interface, which uses the pacman colours - r
 9. Press the `esc` key on the keyboard to restart the game
 
 Java 8 has been used to produce this program in the IDE, IntelliJ. 
+
+--------------
+Created: December 2018
