@@ -26,5 +26,12 @@ The game adopts an easy to use user-interface, which uses the pacman colours - r
 
 Java 8 has been used to produce this program in the IDE, IntelliJ. 
 
+## Screenshots
+<img src = "https://github.com/humaira99/Pacman/blob/master/Start.png?raw=true" width = "652px" height = "375px"><br><br>
+<img src = "https://github.com/humaira99/Pacman/blob/master/Edit.png?raw=true" width = "652px" height = "375px"><br><br>
+<img src = "https://github.com/humaira99/Pacman/blob/master/Levels.png?raw=true" width = "652px" height = "375px"><br><br>
+<img src = "https://github.com/humaira99/Pacman/blob/master/Game.png?raw=true" width = "652px" height = "375px"><br><br>
+<img src = "https://github.com/humaira99/Pacman/blob/master/Score.png?raw=true" width = "652px" height = "375px"><br><br>
+
 --------------
 Created: December 2018
